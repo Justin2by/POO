@@ -1,2 +1,0 @@
-# POO
-POO JUSTIN MUÑOZ
