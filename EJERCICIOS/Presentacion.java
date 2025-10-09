@@ -10,7 +10,12 @@ public class Presentacion {
         System.out.println(Persona1);
         System.out.println(Persona2);
         System.out.println(Persona3);
-        
+
+        Persona1.setNombre("Pablo");
+        Persona1.setSexo("Hombre");
+
+        System.out.println(Persona1);
+
             }
         }
 

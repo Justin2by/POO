@@ -12,6 +12,15 @@ public class Persona {
         this.Sexo = Sexo;
         }
 
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;    
+    }
+
+    public void setSexo(String Sexo) {
+        this.Sexo = Sexo;    
+    }
+
+
     public String toString(){
         return "Hola, me llamo " + Nombre + ", tengo " + Edad + " años y soy " + Sexo + "";
     }   
