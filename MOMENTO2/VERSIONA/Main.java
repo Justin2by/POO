@@ -1,6 +1,6 @@
 package MOMENTO2.VERSIONA;
 
-public class Principal {
+public class Main {
     public static void main(String[] args) {
 
 // Crear una cuenta v lida e inv lida
