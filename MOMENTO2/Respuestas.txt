@@ -100,4 +100,5 @@ Versión B– Clase Producto
  2. ¿Qué sucede si el precio unitario es negativo?
     R\\ Un precio negativo daría un subtotal erróneo por eso se valida para que sea mínimo 0.
  3. Agregue en vivo un impuesto del 8% y explique cómo afecta al total.
-    R\\ 
+    R\\ Agregué un método que suma el 8% al subtotal, el impuesto aumenta el total final del producto.
+    
