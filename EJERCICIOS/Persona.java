@@ -21,8 +21,7 @@ public class Persona {
     }
     public String getSexo() {
         return Sexo;
-    }    
-
+    }   
     public String toString(){
         return "Hola, me llamo " + Nombre + ", tengo " + Edad + " años y soy " + Sexo + "";
     }   
