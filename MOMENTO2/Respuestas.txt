@@ -1,0 +1,103 @@
+RESPUESTAS MOMENTO 2
+Parte I– Conceptual (10%)
+ Responda brevemente:
+ 1. ¿Qué es la encapsulación y por qué es importante en la Programación Orientada a Objetos?
+    R\\ La encapsulación es un principio de POO que consiste en ocultar los datos de una clase
+     y permitir que solo se acceda a ellos mediante métodos. Es importante porque protege la
+      información, evita que hagamos modificaciones indebidas y tambien permite controlar cómo
+       se usan los atributos del objeto.
+ 2. ¿Qué diferencia hay entre un método y un constructor?
+    R\\El constructor se usa para crear e inicializar objetos, en cambio el método sirve para
+     realizar acciones del objeto, tambien el constructor se ejecuta automáticamente y el método no.
+ 3. ¿Por qué los atributos deben ser privados y no públicos?
+    R\\Los atributos son privados para proteger la información del objeto y evitar cambios indebidos.
+ 4. ¿Qué función cumplen los getters y setters?
+    R\\Los getters y setters sirven para leer y modificar los atributos privados de una clase de forma segura y controlada.
+ 5. Verdadero o falso: “Un método setter no debe validar los datos que recibe.” Justifique.
+    R\\Falso. Un setter debe validar los datos antes de asignarlos, para evitar valores incorrectos.
+
+Parte II– Modelado (15%)
+ Complete la siguiente tabla para definir los atributos y métodos de la clase que implementará más
+ adelante.
+
+Versión A– Clase CuentaBancaria
+
+  Atributos
+
+ | Nombre       | Tipo de dato     | Visibilidad     | Descripción                                            |
+ | ------------ | ---------------- | --------------- | ------------------------------------------------------ |
+ | titular      | String           | private         | Nombre del dueño de la cuenta                          |
+ | numeroCuenta | String           | private         | Número identificador de la cuenta                      |
+ | saldo        | double           | private         | Dinero disponible en la cuenta (no puede ser negativo) |
+
+  Métodos
+
+ | Nombre            | Parámetros             | Retorno     | Descripción                                                |
+ | ----------------- | ---------------------- | ----------- | ---------------------------------------------------------- |
+ | CuentaBancaria()  | Ninguno                | Ninguno     | Constructor por defecto: inicializa con valores genéricos  |
+ | CuentaBancaria()  | String, String, double | Ninguno     | Constructor parametrizado con validaciones                 |
+ | depositar()       | double monto           | void        | Aumenta el saldo si el monto es mayor que 0                |
+ | retirar()         | double monto           | void        | Disminuye el saldo si hay suficiente dinero                |
+ | getTitular()      | Ninguno                | String      | Devuelve el nombre del titular                             |
+ | setTitular()      | String titular         | void        | Asigna un nuevo titular (si no está vacío)                 |
+ | getNumeroCuenta() | Ninguno                | String      | Devuelve el número de cuenta                               |
+ | setNumeroCuenta() | String numeroCuenta    | void        | Asigna un número de cuenta válido (mínimo 6 dígitos)       |
+ | getSaldo()        | Ninguno                | double      | Devuelve el saldo actual                                   |
+ | setSaldo()        | double saldo           | void        | Asigna un saldo si es mayor o igual a 0                    |
+ | toString()        | Ninguno                | String      | Devuelve una cadena con la información básica de la cuenta |
+
+ Resultado final:
+ Saldo cuenta válida: 600
+ Saldo cuenta inválida: 30
+
+ Preguntas de sustentación:
+ 1. ¿Por qué el atributo saldo debe ser privado?
+    R\\Porque así se protege el dinero de la cuenta y nadie puede cambiarlo directamente,
+    solo se modifica mediante métodos con validaciones.
+ 2. ¿Qué ocurriría si se intenta depositar un valor negativo?
+    R\\No debería cambiar el saldo, porque el método valida que el monto sea mayor que cero, 
+    Si no se validara el saldo bajaría lo cual podria ser un error.
+ 3. Modifique en vivo el código para permitir un sobregiro máximo de -50 y explique el cambio
+    R\\En el método retirar cambié la condición para permitir que el saldo llegue hasta -50:(saldo - monto) >= -50
+    así se puede retirar más dinero, pero solo hasta un límite controlado.
+
+Versión B– Clase Producto
+
+  Atributos
+
+ | Nombre         | Tipo de dato     | Visibilidad     | Descripción                                         |
+ | -------------- | ---------------- | --------------- | --------------------------------------------------- |
+ | codigo         | String           | private         | Código único que identifica el producto             |
+ | descripcion    | String           | private         | Texto que describe el producto                      |
+ | cantidad       | int              | private         | Número de unidades disponibles (mínimo 1)           |
+ | precioUnitario | double           | private         | Valor unitario del producto (no puede ser negativo) |
+
+  Métodos
+ | Nombre                | Parámetros                  | Retorno     | Descripción                                                      |
+ | --------------------- | --------------------------- | ----------- | ---------------------------------------------------------------- |
+ | Producto()            | Ninguno                     | Ninguno     | Constructor por defecto: asigna valores genéricos                |
+ | Producto()            | String, String, int, double | Ninguno     | Constructor parametrizado con validaciones                       |
+ | getCodigo()           | Ninguno                     | String      | Retorna el código del producto                                   |
+ | setCodigo()           | String codigo               | void        | Asigna un nuevo código si no está vacío                          |
+ | getDescripcion()      | Ninguno                     | String      | Devuelve la descripción del producto                             |
+ | setDescripcion()      | String descripcion          | void        | Cambia la descripción si no está vacía                           |
+ | getCantidad()         | Ninguno                     | int         | Devuelve la cantidad actual del producto                         |
+ | setCantidad()         | int cantidad                | void        | Asigna una nueva cantidad si es mayor que 0                      |
+ | getPrecioUnitario()   | Ninguno                     | double      | Devuelve el precio unitario                                      |
+ | setPrecioUnitario()   | double precioUnitario       | void        | Asigna un precio válido si es mayor o igual a 0                  |
+ | calcularSubtotal()    | Ninguno                     | double      | Retorna el subtotal (cantidad × precio unitario)                 |
+ | aplicarDescuento()    | double porcentaje           | void        | Aplica un descuento al precio si el porcentaje está entre 0 y 50 |
+ | incrementarCantidad() | int valor                   | void        | Aumenta la cantidad si el valor es mayor que 0                   |
+ | toString()            | Ninguno                     | String      | Muestra la información completa del producto en texto            |
+ 
+ Resultado final:
+ Subtotal inicial: $300.000
+ Total con descuento aplicado: $600.000
+
+  Preguntas de sustentación:
+ 1. ¿Porqué se valida el porcentaje del descuento?
+    R\\ Se valida para evitar porcentajes fuera del rango permitido y que el precio no quede mal calculado.
+ 2. ¿Qué sucede si el precio unitario es negativo?
+    R\\ Un precio negativo daría un subtotal erróneo por eso se valida para que sea mínimo 0.
+ 3. Agregue en vivo un impuesto del 8% y explique cómo afecta al total.
+    R\\ 
