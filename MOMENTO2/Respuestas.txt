@@ -4,17 +4,17 @@ Parte I– Conceptual (10%)
  1. ¿Qué es la encapsulación y por qué es importante en la Programación Orientada a Objetos?
     R\\ La encapsulación es un principio de POO que consiste en ocultar los datos de una clase
      y permitir que solo se acceda a ellos mediante métodos. Es importante porque protege la
-      información, evita que hagamos modificaciones indebidas y tambien permite controlar cómo
+      información y evita que hagamos modificaciones indebidas y tambien permite controlar cómo
        se usan los atributos del objeto.
  2. ¿Qué diferencia hay entre un método y un constructor?
-    R\\El constructor se usa para crear e inicializar objetos, en cambio el método sirve para
+    R\\ El constructor se usa para crear e inicializar objetos, en cambio el método sirve para
      realizar acciones del objeto, tambien el constructor se ejecuta automáticamente y el método no.
  3. ¿Por qué los atributos deben ser privados y no públicos?
-    R\\Los atributos son privados para proteger la información del objeto y evitar cambios indebidos.
+    R\\ Los atributos son privados para proteger la información del objeto y evitar cambios indebidos.
  4. ¿Qué función cumplen los getters y setters?
-    R\\Los getters y setters sirven para leer y modificar los atributos privados de una clase de forma segura y controlada.
+    R\\ Los getters y setters sirven para leer y modificar los atributos privados de una clase de forma segura y controlada.
  5. Verdadero o falso: “Un método setter no debe validar los datos que recibe.” Justifique.
-    R\\Falso. Un setter debe validar los datos antes de asignarlos, para evitar valores incorrectos.
+    R\\ Falso, un setter debe validar los datos antes de asignarlos para evitar valores incorrectos.
 
 Parte II– Modelado (15%)
  Complete la siguiente tabla para definir los atributos y métodos de la clase que implementará más
@@ -101,4 +101,3 @@ Versión B– Clase Producto
     R\\ Un precio negativo daría un subtotal erróneo por eso se valida para que sea mínimo 0.
  3. Agregue en vivo un impuesto del 8% y explique cómo afecta al total.
     R\\ Agregué un método que suma el 8% al subtotal, el impuesto aumenta el total final del producto.
-    

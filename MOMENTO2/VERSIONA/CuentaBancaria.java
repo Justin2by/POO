@@ -78,7 +78,7 @@ public CuentaBancaria(String titular, String numeroCuenta, double saldo) {
             saldo -= monto;
         }
     }
-    // "sobregiro máximo de-50"    
+// "sobregiro máximo de-50"    
     //public void retirar(double monto) {
     //if (monto > 0 && (saldo - monto) >= -50) {
     //    saldo -= monto;

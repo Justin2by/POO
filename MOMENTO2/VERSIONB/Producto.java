@@ -15,7 +15,7 @@ public class Producto {
         this.precioUnitario = 0.0;
     }
 
-    // "Impuesto del 8%""
+// "Impuesto del 8%""
     //public double calcularTotalConImpuesto() {
     //double subtotal = calcularSubtotal();
     //double impuesto = subtotal * 0.08; // 8%
@@ -100,7 +100,7 @@ public class Producto {
             cantidad += valor;
         }
     }
-    
+
 // M todo toString  
     public String toString() {
         return "Código: " + codigo + ", Descripción: " + descripcion + ", Cantidad: " + cantidad + ", Precio unitario: $" + precioUnitario + ", Subtotal: $" + calcularSubtotal();
