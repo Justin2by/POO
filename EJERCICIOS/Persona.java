@@ -19,7 +19,9 @@ public class Persona {
     public void setSexo(String Sexo) {
         this.Sexo = Sexo;    
     }
-
+    public String getSexo() {
+        return Sexo;
+    }    
 
     public String toString(){
         return "Hola, me llamo " + Nombre + ", tengo " + Edad + " años y soy " + Sexo + "";
