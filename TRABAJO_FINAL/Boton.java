@@ -25,7 +25,7 @@ public class Boton {
     }    
 
     public void cancelarIluminacion() {
-        this
+        this.iluminado = false;
     }
 
 }
