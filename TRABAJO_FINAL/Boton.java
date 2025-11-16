@@ -29,4 +29,12 @@ public class Boton {
         System.out.println("[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
 
+    public boolean presionar() {
+        if (!iluminado) {
+            iluminar();
+            return true;
+        }
+        return
+    }
+
 }
