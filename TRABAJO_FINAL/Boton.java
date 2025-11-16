@@ -34,7 +34,7 @@ public class Boton {
             iluminar();
             return true;
         }
-        return
+        return false;
     }
 
 }
