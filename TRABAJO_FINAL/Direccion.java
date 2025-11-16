@@ -1,5 +1,7 @@
 package TRABAJO_FINAL;
 
-public class Direccion {
-    
+public enum Direccion {
+    SUBIENDO,
+    BAJANDO,
+    DETENIDO
 }
