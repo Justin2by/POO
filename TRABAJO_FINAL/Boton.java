@@ -26,6 +26,7 @@ public class Boton {
 
     public void cancelarIluminacion() {
         this.iluminado = false;
+        System.out.println("[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
 
 }
