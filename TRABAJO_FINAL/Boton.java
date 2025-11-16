@@ -10,5 +10,22 @@ public class Boton {
         this.numeroPiso = numeroPiso;
         this.iluminado = false;
         this.esBotonPiso = false;
+        this.direccionSolicitada = null;
     }
+
+    public Boton(int numeroPiso, Direccion direccion){
+        this.numeroPiso = numeroPiso;
+        this.iluminado = false;
+        this.esBotonPiso = true;
+        this.direccionSolicitada = direccion;
+
+    public void iluminar() {
+        this.iluminado = true;
+        System.out.println("[ILUMINADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
+    }    
+
+    public void cancelarIluminacion() {
+        this
+    }
+
 }
