@@ -60,6 +60,6 @@ public class ControlElevador {
         elevador.parar();
     }
 
-    
+    System.out.println();    
 
 }
