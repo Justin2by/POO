@@ -26,5 +26,9 @@ public class ControlElevador {
 
     public void loopControlElevador() {
         System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 }
