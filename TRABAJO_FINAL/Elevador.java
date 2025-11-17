@@ -1,5 +1,8 @@
 package TRABAJO_FINAL;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Elevador {
     private int pisoActual;
     private Direccion direccion;
@@ -24,6 +27,11 @@ public class Elevador {
     }
 
     public void mover() {
-        
+        if (direccion == Direccion.SUBIENDO && pisoActual < pisoMaximo) {
+            pisoActual++;
+            System.out.println("[MOVIMIENTO] Elevador subiendo... Piso actual: " + pisoActual);
+        } else if (direccion == Direccion.BAJANDO && pisoActual > pisoMinimo) {
+            
+        }
     }
 }
