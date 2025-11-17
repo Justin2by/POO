@@ -41,14 +41,19 @@ public class ControlElevador {
                 pisoActual.cancelarIluminacion(elevador.getDireccion());
             }
 
-            if (elevador.hayPeticionesEnDireccion()) {
-                elevador.mover();
-            } else {
-                elevador.determinarDireccion();
-                if (elevador.getDireccion() != Direccion.DETENIDO) {
+            if (elevador.tienePeticiones()) {
+                elevador.determinarDireccion();            
+
+                if (elevador.hayPeticionesEnDireccion()) {
                     elevador.mover();
+                } else {
+                    elevador.determinarDireccion();
+                    if (elevador.getDireccion() != Direccion.DETENIDO) {
+                        elevador.mover();
                 }
             }
         }
     }
+}
+
 }
