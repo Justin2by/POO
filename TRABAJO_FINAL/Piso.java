@@ -7,5 +7,11 @@ public class Piso {
 
     public Piso (int numero, boolean esPrimerPiso, boolean esUltimoPiso) {
         this.numero = numero;
+
+        if (esPrimerPiso) {
+            this.botonSubir = new Boton(numero, Direccion.SUBIENDO);
+            this.botonBajar = null;
+
+        }
     }
 }
