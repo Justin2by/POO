@@ -1,5 +1,6 @@
 package TRABAJO_FINAL;
 
-public class EstadoPuerta {
-    
+public enum EstadoPuerta {
+    ABIERTA,
+    CERRADA
 }
