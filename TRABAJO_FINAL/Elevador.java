@@ -111,5 +111,10 @@ public class Elevador {
 
     public Direccion getDireccion() {
         return direccion;    
-    }    
+    }
+    
+    public Puerta getPuerta() {
+        return puerta;
+    }
+
 }
