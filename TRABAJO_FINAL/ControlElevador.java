@@ -15,12 +15,16 @@ public class ControlElevador {
         this.elevador = new Elevador(numeroPisos);
         this.pisos = new ArrayList<>();
         this.solicitudesExternas = new LinkedList<>();
-        
+
         // Crear los pisos del edificio
         for (int i = 1; i <= numeroPisos; i++) {
             boolean esPrimero = (i == 1);
             boolean esUltimo = (i == numeroPisos);
             pisos.add(new Piso(i, esPrimero, esUltimo));
         }
+    }
+
+    public void loopControlElevador() {
+        System.out.println();
     }
 }
