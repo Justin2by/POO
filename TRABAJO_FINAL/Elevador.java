@@ -124,8 +124,12 @@ public class Elevador {
     public boolean tienePeticiones() {
         return !peticiones.isEmpty();
     }
-    
+
     public int getPisoMinimo() {
         return pisoMinimo;
-    }    
+    }
+    
+    public int getPisoMaximo() {
+        return pisoMaximo;
+    }        
 }
