@@ -5,4 +5,11 @@ public class Elevador {
     private Direccion direccion;
     private Puerta puerta;
     private List <Boton> botonesInternos;
+    private int pisoMinimo;
+    private int pisoMaximo;
+    private List<Integer> peticiones;
+
+    public Elevador (int numeroPisos) {
+        
+    }
 }
