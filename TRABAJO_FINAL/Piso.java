@@ -10,8 +10,7 @@ public class Piso {
 
     /**
      * Constructor para el piso
-     * 
-     * @param numero       Número del piso
+     * @param numero Número del piso
      * @param esPrimerPiso true si es el primer piso
      * @param esUltimoPiso true si es el último piso
      */
@@ -55,7 +54,6 @@ public class Piso {
 
     /**
      * Cancela la iluminación de los botones según la dirección del elevador
-     * 
      * @param direccion La dirección en la que se mueve el elevador
      */
     public void cancelarIluminacion(Direccion direccion) {
