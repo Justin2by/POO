@@ -76,5 +76,9 @@ private void procesarSolicitudesExternas() {
     }
 }
 
-
+public void solicitarElevador(int numeroPiso, Direccion direccion) {
+    if (numeroPiso < 1 || numeroPiso > pisos.size()) {
+        System.out.println("[ERROR]")
+    }
+}
 
