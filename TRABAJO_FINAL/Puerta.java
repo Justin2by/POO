@@ -17,7 +17,13 @@ public class Puerta {
     public void cerrar() {
         if (estado == EstadoPuerta.ABIERTA){
             estado = EstadoPuerta.CERRADA;
-            
+            System.out.println("[PUERTA] Abierta");
         }
     }
+
+    public boolean estaAbierta() {
+        return estado == EstadoPuerta.ABIERTA;
+    }
+
+    
 }
