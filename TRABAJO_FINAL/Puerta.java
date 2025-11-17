@@ -1,5 +1,8 @@
 package TRABAJO_FINAL;
 
+/**
+ * Clase que representa la puerta del elevador
+ */
 public class Puerta {
     private EstadoPuerta estado;
 
