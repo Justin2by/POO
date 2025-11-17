@@ -31,7 +31,7 @@ public class Elevador {
             pisoActual++;
             System.out.println("[MOVIMIENTO] Elevador subiendo... Piso actual: " + pisoActual);
         } else if (direccion == Direccion.BAJANDO && pisoActual > pisoMinimo) {
-            
+            System.out.println("[MOVIMIENTO] Elevador bajando... Piso actual: " + pisoActual);            
         }
     }
 }
