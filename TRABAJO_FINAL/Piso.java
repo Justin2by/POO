@@ -46,4 +46,8 @@ public class Piso {
     public Boton getBotonSubir() {
         return botonSubir;
     }
+
+    public Boton getBotonBajar() {
+        return 
+    }
 }
