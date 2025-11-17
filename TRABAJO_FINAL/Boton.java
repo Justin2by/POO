@@ -7,9 +7,13 @@ package TRABAJO_FINAL;
 public class Boton {
     private int numeroPiso;
     private boolean ilumado;
-    private boolean esBoton;
-    private Direccion direccionSolicitada;
-
+    private boolean esBoton; // true si está en el piso, false si está dentro del elevador
+    private Direccion direccionSolicitada; // Solo aplica para botones de piso
+    
+    /**
+     * Constructor para botones dentro del elevador
+     * @param numeroPiso El número de piso que representa este botón
+     */
     public Boton(int numeroPiso) {
         this.numeroPiso = numeroPiso;
         this.iluminado = false;
