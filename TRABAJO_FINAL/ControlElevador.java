@@ -30,5 +30,15 @@ public class ControlElevador {
         System.out.println("         SISTEMA DE CONTROL DE ELEVADOR");
         System.out.println("========================================================");
         System.out.println();
+
+        procesarSolicitudesExternas();
+
+        while (elevador.tienePeticiones()) {
+            if (elevador.getPeticiones().contains(elevador.getPisoActual())) {
+                elevador.atenderPisoActual();
+
+                Piso
+            }
+        }
     }
 }
