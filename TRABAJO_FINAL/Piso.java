@@ -29,4 +29,10 @@ public class Piso {
             botonSubir.presionar();
         }
     }
+
+    public void cancelarIluminacion(Direccion direccion) {
+        if (direccion == Direccion.SUBIENDO && botonSubir != null && botonSubir.isIluminado()) {
+            botonSubir.cancelarIluminacion();
+        } else if 
+    }
 }
