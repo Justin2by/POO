@@ -67,5 +67,11 @@ public class ControlElevador {
     System.out.println("========================================================");
     System.out.println();
         
+}
 
+private void procesarSolicitudesExternas() {
+    while (!solicitudesExternas.isEmpty()) {
+        
+    }
+}
 }
