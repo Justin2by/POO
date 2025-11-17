@@ -1,5 +1,9 @@
 package TRABAJO_FINAL;
 
+/**
+ * Clase que representa un botón del sistema de ascensor
+ * Puede ser un botón dentro del elevador o en los pisos
+ */
 public class Boton {
     private int numeroPiso;
     private boolean ilumado;
