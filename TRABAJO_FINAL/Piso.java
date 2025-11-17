@@ -39,5 +39,11 @@ public class Piso {
 
     }
 
-    
+    public int getNumero() {
+        return numero;
+    }
+
+    public Boton getBotonSubir() {
+        return botonSubir;
+    }
 }
