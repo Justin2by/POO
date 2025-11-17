@@ -13,5 +13,17 @@ public class Elevador {
         this.pisoMinimo = 1;
         this.pisoMaximo = numeroPisos;
         this.pisoActual = 1;
+        this.direccion = Direccion.DETENIDO;
+        this.puerta = new Puerta();
+        this.botonesInternos = new ArrayList<>();
+        this.peticiones = new ArrayList<>();
+
+        for (int i = pisoMinimo; i <= pisoMaximo; i++) {
+            botonesInternos.add(new Boton(i));
+        }
+    }
+
+    public void mover() {
+        
     }
 }
