@@ -42,7 +42,7 @@ public class ControlElevador {
             }
 
             if (elevador.tienePeticiones()) {
-                elevador.determinarDireccion();            
+                elevador.determinarDireccion();
 
                 if (elevador.hayPeticionesEnDireccion()) {
                     elevador.mover();
@@ -50,10 +50,10 @@ public class ControlElevador {
                     elevador.determinarDireccion();
                     if (elevador.getDireccion() != Direccion.DETENIDO) {
                         elevador.mover();
+                    }
                 }
             }
         }
     }
-}
 
 }
