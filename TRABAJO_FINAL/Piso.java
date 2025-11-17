@@ -38,7 +38,8 @@ public class Piso {
         }
 
     }
-
+    
+    // Getters
     public int getNumero() {
         return numero;
     }
