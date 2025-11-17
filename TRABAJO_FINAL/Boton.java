@@ -48,6 +48,10 @@ public class Boton {
     
     public boolean isBotonPiso() {
         return esBotonPiso;
+    }
+
+    public Direccion getDireccionSolicitada() {
+        return direccionSolicitada;
     }    
     
 }
