@@ -7,7 +7,7 @@ public class Puerta {
         this.estado = EstadoPuerta.CERRADA;
     }
 
-    public void abrir () {
+    public void abrir() {
         if (estado == EstadoPuerta.CERRADA) {
             estado = EstadoPuerta.ABIERTA;
             System.out.println("[PUERTA] Abierta");
@@ -15,7 +15,7 @@ public class Puerta {
     }
 
     public void cerrar() {
-        if (estado == EstadoPuerta.ABIERTA){
+        if (estado == EstadoPuerta.ABIERTA) {
             estado = EstadoPuerta.CERRADA;
             System.out.println("[PUERTA] Abierta");
         }
@@ -25,5 +25,7 @@ public class Puerta {
         return estado == EstadoPuerta.ABIERTA;
     }
 
-    
+    public EstadoPuerta getEstado() {
+        return estado;
+    }
 }
