@@ -37,8 +37,11 @@ public class ControlElevador {
             if (elevador.getPeticiones().contains(elevador.getPisoActual())) {
                 elevador.atenderPisoActual();
 
-                Piso
+                Piso pisoActual = pisos.get(elevador.getPisoActual() - 1);
+                pisoActual.cancelarIluminacion(elevador.getDireccion());
             }
+
+            
         }
     }
 }
