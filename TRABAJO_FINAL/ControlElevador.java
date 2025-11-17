@@ -56,4 +56,10 @@ public class ControlElevador {
         }
     }
 
+    if (elevador.getDireccion() != Direccion.DETENIDO) {
+        elevador.parar();
+    }
+
+    
+
 }
