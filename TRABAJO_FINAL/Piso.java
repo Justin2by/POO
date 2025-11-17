@@ -5,5 +5,7 @@ public class Piso {
     private Boton botonSubir;
     private Boton botonBajar;
 
-    public
+    public Piso (int numero, boolean esPrimerPiso, boolean esUltimoPiso) {
+        this.numero = numero;
+    }
 }
