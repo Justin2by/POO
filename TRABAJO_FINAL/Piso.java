@@ -48,6 +48,6 @@ public class Piso {
     }
 
     public Boton getBotonBajar() {
-        return 
+        return botonBajar;
     }
 }
