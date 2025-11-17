@@ -9,7 +9,7 @@ public class Boton {
     private boolean ilumado;
     private boolean esBoton; // true si está en el piso, false si está dentro del elevador
     private Direccion direccionSolicitada; // Solo aplica para botones de piso
-    
+
     /**
      * Constructor para botones dentro del elevador
      * @param numeroPiso El número de piso que representa este botón
@@ -20,7 +20,12 @@ public class Boton {
         this.esBotonPiso = false;
         this.direccionSolicitada = null;
     }
-
+    
+    /**
+     * Constructor para botones en los pisos
+     * @param numeroPiso El número de piso donde está ubicado el botón
+     * @param direccion La dirección solicitada (SUBIENDO o BAJANDO)
+     */
     public Boton(int numeroPiso, Direccion direccion){
         this.numeroPiso = numeroPiso;
         this.iluminado = false;
