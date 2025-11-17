@@ -43,7 +43,7 @@ public class Elevador {
     }
 
     public boolean agregarPeticion (int piso) {
-        if (piso < pisoMininmo || piso > pisoMaximo) {
+        if (piso < pisoMinimo || piso > pisoMaximo) {
             System.out.println("[ERROR] Piso invalido: " + piso);
             return false;
         }

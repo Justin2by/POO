@@ -6,8 +6,8 @@ package TRABAJO_FINAL;
  */
 public class Boton {
     private int numeroPiso;
-    private boolean ilumado;
-    private boolean esBoton; // true si está en el piso, false si está dentro del elevador
+    private boolean iluminado;
+    private boolean esBotonPiso; // true si está en el piso, false si está dentro del elevador
     private Direccion direccionSolicitada; // Solo aplica para botones de piso
 
     /**
