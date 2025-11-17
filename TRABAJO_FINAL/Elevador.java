@@ -34,4 +34,9 @@ public class Elevador {
             System.out.println("[MOVIMIENTO] Elevador bajando... Piso actual: " + pisoActual);            
         }
     }
+
+    public void parar() {
+        direccion = Direccion.DETENIDO;
+        System.out.println("[DETENIDO] Elevador detenido en piso " + pisoActual);
+    }
 }
