@@ -41,9 +41,13 @@ public class Boton {
     public int getNumeroPiso() {
         return numeroPiso;
     }
-    
+
     public boolean isIluminado() {
         return iluminado;
     }
+    
+    public boolean isBotonPiso() {
+        return esBotonPiso;
+    }    
     
 }
