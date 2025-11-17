@@ -1,8 +1,10 @@
 package TRABAJO_FINAL;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
+/**
+ * Clase que representa el elevador fisico
+ */
 public class Elevador {
     private int pisoActual;
     private Direccion direccion;
@@ -81,6 +83,13 @@ public class Elevador {
                 siguientePiso = piso;
             }
         }
-        
+
+        if (siguientePiso > pisoActual) {
+            direccion = Direccion.SUBIENDO;
+        } else if (siguientePiso < pisoActual) {
+            direccion = Direccion.BAJANDO;
+        } else {
+            direccion = Direccion.DETENIDO;
+        }        
     }
 }
