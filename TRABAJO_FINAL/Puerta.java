@@ -6,10 +6,16 @@ package TRABAJO_FINAL;
 public class Puerta {
     private EstadoPuerta estado;
 
+    /**
+     * Constructor por defecto - la puerta inicia cerrada
+     */
     public Puerta() {
         this.estado = EstadoPuerta.CERRADA;
     }
-
+    
+    /**
+     * Abre la puerta del elevador
+     */
     public void abrir() {
         if (estado == EstadoPuerta.CERRADA) {
             estado = EstadoPuerta.ABIERTA;
