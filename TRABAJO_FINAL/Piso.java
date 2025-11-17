@@ -11,7 +11,13 @@ public class Piso {
         if (esPrimerPiso) {
             this.botonSubir = new Boton(numero, Direccion.SUBIENDO);
             this.botonBajar = null;
-
         }
+
+        else if (esUltimoPiso) {
+            this.botonSubir = null;
+            this.botonBajar = new Boton(numero, Direccion.BAJANDO);
+        }
+
+        
     }
 }
