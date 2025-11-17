@@ -9,16 +9,17 @@ public class Elevador {
     private int pisoActual;
     private Direccion direccion;
     private Puerta puerta;
-    private List <Boton> botonesInternos;
+    private List<Boton> botonesInternos;
     private int pisoMinimo;
     private int pisoMaximo;
     private List<Integer> peticiones;
 
     /**
      * Constructor del elevador
+     * 
      * @param numeroPisos Cantidad total de pisos del edificio
      */
-    public Elevador (int numeroPisos) {
+    public Elevador(int numeroPisos) {
         this.pisoMinimo = 1;
         this.pisoMaximo = numeroPisos;
         this.pisoActual = 1; // Inicia en el primer piso
@@ -41,7 +42,7 @@ public class Elevador {
             pisoActual++;
             System.out.println("[MOVIMIENTO] Elevador subiendo... Piso actual: " + pisoActual);
         } else if (direccion == Direccion.BAJANDO && pisoActual > pisoMinimo) {
-            System.out.println("[MOVIMIENTO] Elevador bajando... Piso actual: " + pisoActual);            
+            System.out.println("[MOVIMIENTO] Elevador bajando... Piso actual: " + pisoActual);
         }
     }
 
@@ -55,10 +56,11 @@ public class Elevador {
 
     /**
      * Agrega una peticion de piso
+     * 
      * @param piso El piso solicitado
      * @return true si la peticion fue agregada exitosamente
      */
-    public boolean agregarPeticion (int piso) {
+    public boolean agregarPeticion(int piso) {
         if (piso < pisoMinimo || piso > pisoMaximo) {
             System.out.println("[ERROR] Piso invalido: " + piso);
             return false;
@@ -66,12 +68,12 @@ public class Elevador {
 
         if (!peticiones.contains(piso) && piso != pisoActual) {
             peticiones.add(piso);
-            // Iluminar el boton correspondiente            
+            // Iluminar el boton correspondiente
             botonesInternos.get(piso - 1).iluminar();
             System.out.println("[OK] Peticion agregada para piso " + piso);
             return true;
         }
-        return false;        
+        return false;
     }
 
     /**
@@ -83,7 +85,7 @@ public class Elevador {
             parar();
             puerta.abrir();
 
-            // Cancelar iluminacion del boton            
+            // Cancelar iluminacion del boton
             botonesInternos.get(pisoActual - 1).cancelarIluminacion();
             peticiones.remove(Integer.valueOf(pisoActual));
 
@@ -116,9 +118,9 @@ public class Elevador {
             direccion = Direccion.BAJANDO;
         } else {
             direccion = Direccion.DETENIDO;
-        }        
+        }
     }
-    
+
     /**
      * Verifica si hay peticiones en la direccion actual
      */
@@ -130,7 +132,7 @@ public class Elevador {
                 return true;
             }
         }
-        return false; 
+        return false;
     }
 
     // Getters
@@ -139,7 +141,7 @@ public class Elevador {
     }
 
     public Direccion getDireccion() {
-        return direccion;    
+        return direccion;
     }
 
     public Puerta getPuerta() {
@@ -157,8 +159,8 @@ public class Elevador {
     public int getPisoMinimo() {
         return pisoMinimo;
     }
-    
+
     public int getPisoMaximo() {
         return pisoMaximo;
-    }        
+    }
 }
