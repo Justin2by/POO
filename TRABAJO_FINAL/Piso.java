@@ -23,4 +23,10 @@ public class Piso {
             this.botonBajar = new Boton(numero, Direccion.BAJANDO);
         }
     }
+    
+    public void presionarBotonSubir() {
+        if (botonSubir != null) {
+            botonSubir.presionar();
+        }
+    }
 }
