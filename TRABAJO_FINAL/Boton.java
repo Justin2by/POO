@@ -42,12 +42,19 @@ public class Boton {
                 "[ILUMINADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
 
+    /**
+     * Cancela la iluminación del botón
+     */
     public void cancelarIluminacion() {
         this.iluminado = false;
         System.out.println(
                 "[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
-
+    
+    /**
+     * Presiona el botón
+     * @return true si el botón fue presionado exitosamente
+     */
     public boolean presionar() {
         if (!iluminado) {
             iluminar();
