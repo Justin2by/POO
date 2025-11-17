@@ -75,6 +75,7 @@ public class Elevador {
             return;
         }
 
-        int
+        int siguientePiso = peticiones.get(0);
+        
     }
 }
