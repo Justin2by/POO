@@ -12,7 +12,7 @@ public class Puerta {
     public Puerta() {
         this.estado = EstadoPuerta.CERRADA;
     }
-    
+
     /**
      * Abre la puerta del elevador
      */
@@ -23,13 +23,20 @@ public class Puerta {
         }
     }
 
+    /**
+     * Cierra la puerta del elevador
+     */
     public void cerrar() {
         if (estado == EstadoPuerta.ABIERTA) {
             estado = EstadoPuerta.CERRADA;
             System.out.println("[PUERTA] Abierta");
         }
     }
-
+    
+    /**
+     * Verifica si la puerta está abierta
+     * @return true si la puerta está abierta
+     */
     public boolean estaAbierta() {
         return estado == EstadoPuerta.ABIERTA;
     }
