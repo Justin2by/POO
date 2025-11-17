@@ -116,9 +116,12 @@ public class Elevador {
     public Puerta getPuerta() {
         return puerta;
     }
-    
+
     public List<Integer> getPeticiones() {
         return new ArrayList<>(peticiones);
     }
-
+    
+    public boolean tienePeticiones() {
+        return !peticiones.isEmpty();
+    }
 }
