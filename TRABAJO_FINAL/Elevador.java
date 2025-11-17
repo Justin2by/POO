@@ -45,5 +45,15 @@ public class Elevador {
             System.out.println("[ERROR] Piso invalido: " + piso);
             return false;
         }
+
+        if (!peticiones.contains(piso) && piso != pisoActual) {
+            peticiones.add(piso);
+            botonesInternos.get(piso - 1).iluminar();
+            System.out.println("[OK] Peticion agregada para piso " + piso);
+            return true;
+        }
+        return false;        
     }
+
+
 }
