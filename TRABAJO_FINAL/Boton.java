@@ -31,7 +31,11 @@ public class Boton {
         this.iluminado = false;
         this.esBotonPiso = true;
         this.direccionSolicitada = direccion;
-
+    } 
+       
+    /**
+     * Ilumina el botón cuando es presionado
+     */
     public void iluminar() {
         this.iluminado = true;
         System.out.println(
