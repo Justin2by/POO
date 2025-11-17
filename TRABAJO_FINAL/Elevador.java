@@ -55,5 +55,12 @@ public class Elevador {
         return false;        
     }
 
+    public void atenderPisoActual() {
+        if (peticiones.contains(pisoActual)) {
+            parar();
+            puerta.abrir();
+            
+        }
+    }
 
 }
