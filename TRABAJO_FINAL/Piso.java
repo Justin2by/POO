@@ -18,6 +18,9 @@ public class Piso {
             this.botonBajar = new Boton(numero, Direccion.BAJANDO);
         }
 
-        
+        else {
+            this.botonSubir = new Boton(numero, Direccion.SUBIENDO);
+            this.botonBajar = new Boton(numero, Direccion.BAJANDO);
+        }
     }
 }
