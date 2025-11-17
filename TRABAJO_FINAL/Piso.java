@@ -1,5 +1,8 @@
 package TRABAJO_FINAL;
 
+/**
+ * Clase que representa un piso del edificio
+ */
 public class Piso {
     private int numero;
     private Boton botonSubir;
@@ -38,7 +41,7 @@ public class Piso {
         }
 
     }
-    
+
     // Getters
     public int getNumero() {
         return numero;
