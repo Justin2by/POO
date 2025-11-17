@@ -10,6 +10,8 @@ public class Elevador {
     private List<Integer> peticiones;
 
     public Elevador (int numeroPisos) {
-        
+        this.pisoMinimo = 1;
+        this.pisoMaximo = numeroPisos;
+        this.pisoActual = 1;
     }
 }
