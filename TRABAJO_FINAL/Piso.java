@@ -33,6 +33,11 @@ public class Piso {
     public void cancelarIluminacion(Direccion direccion) {
         if (direccion == Direccion.SUBIENDO && botonSubir != null && botonSubir.isIluminado()) {
             botonSubir.cancelarIluminacion();
-        } else if 
+        } else if (direccion == Direccion.BAJANDO && botonBajar != null & botonBajar.isIluminado()) {
+            botonBajar.cancelarIluminacion();
+        }
+
     }
+
+    
 }
