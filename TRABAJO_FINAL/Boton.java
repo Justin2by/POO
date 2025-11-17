@@ -21,12 +21,14 @@ public class Boton {
 
     public void iluminar() {
         this.iluminado = true;
-        System.out.println("[ILUMINADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
-    }    
+        System.out.println(
+                "[ILUMINADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
+    }
 
     public void cancelarIluminacion() {
         this.iluminado = false;
-        System.out.println("[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
+        System.out.println(
+                "[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
 
     public boolean presionar() {
@@ -45,13 +47,13 @@ public class Boton {
     public boolean isIluminado() {
         return iluminado;
     }
-    
+
     public boolean isBotonPiso() {
         return esBotonPiso;
     }
 
     public Direccion getDireccionSolicitada() {
         return direccionSolicitada;
-    }    
-    
+    }
+
 }
