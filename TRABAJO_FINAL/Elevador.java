@@ -97,6 +97,10 @@ public class Elevador {
         for (int piso : peticiones) {
             if (direccion == Direccion.SUBIENDO && piso > pisoActual) {
                 return true;
+            } else if (direccion == Direccion.BAJANDO && piso < pisoActual) {
+                return true;
             }
-        } 
-}
+        }
+        return false; 
+    }
+}    
