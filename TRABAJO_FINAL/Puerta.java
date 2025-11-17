@@ -8,6 +8,9 @@ public class Puerta {
     }
 
     public void abrir () {
-        if
+        if (estado == EstadoPuerta.CERRADA) {
+            estado = EstadoPuerta.ABIERTA;
+            System.out.println("[PUERTA] Abierta");
+        }
     }
 }
