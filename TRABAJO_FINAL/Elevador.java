@@ -94,5 +94,9 @@ public class Elevador {
     }
 
     public boolean hayPeticionesEnDireccion() {
-        for (int piso : peticiones) 
+        for (int piso : peticiones) {
+            if (direccion == Direccion.SUBIENDO && piso > pisoActual) {
+                return true;
+            }
+        } 
 }
