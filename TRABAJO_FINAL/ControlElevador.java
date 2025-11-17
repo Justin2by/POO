@@ -71,7 +71,10 @@ public class ControlElevador {
 
 private void procesarSolicitudesExternas() {
     while (!solicitudesExternas.isEmpty()) {
-        
+        Integer piso = solicitudesExternas.poll();
+        elevador.agregarPeticion(piso);
     }
 }
-}
+
+
+
