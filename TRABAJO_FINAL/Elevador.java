@@ -103,4 +103,8 @@ public class Elevador {
         }
         return false; 
     }
+
+    public int getPisoActual() {
+        return pisoActual;
+    }
 }    
