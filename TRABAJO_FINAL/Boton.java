@@ -37,4 +37,6 @@ public class Boton {
         return false;
     }
 
+    // Getters
+
 }

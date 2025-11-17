@@ -4,6 +4,10 @@ public class Puerta {
     private EstadoPuerta estado;
 
     public Puerta() {
-        this.estado
+        this.estado = EstadoPuerta.CERRADA;
+    }
+
+    public void abrir () {
+        if
     }
 }
