@@ -92,4 +92,7 @@ public class Elevador {
             direccion = Direccion.DETENIDO;
         }        
     }
+
+    public boolean hayPeticionesEnDireccion() {
+        for (int piso : peticiones) 
 }
