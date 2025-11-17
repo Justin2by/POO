@@ -63,7 +63,9 @@ public class Elevador {
             botonesInternos.get(pisoActual - 1).cancelarIluminacion();
             peticiones.remove(Integer.valueOf(pisoActual));
 
-            
+            System.out.println("[ATENCION] Pasajeros descendiendo/abordando en piso " + pisoActual);
+
+            puerta.cerrar();
         }
     }
 
