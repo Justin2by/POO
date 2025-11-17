@@ -76,6 +76,11 @@ public class Elevador {
         }
 
         int siguientePiso = peticiones.get(0);
+        for (int piso : peticiones) {
+            if (Math.abs(piso - pisoActual) < Math.abs(siguientePiso - pisoActual)) {
+                siguientePiso = piso;
+            }
+        }
         
     }
 }
