@@ -54,8 +54,12 @@ public class Piso {
     public Boton getBotonBajar() {
         return botonBajar;
     }
-    
+
     public boolean tieneBotonSubirIluminado() {
         return botonSubir != null && botonSubir.isIluminado();
-    }    
+    }
+    
+    public boolean tieneBotonBajarIluminado() {
+        return botonBajar != null && botonBajar.isIluminado();
+    }        
 }
