@@ -39,4 +39,11 @@ public class Elevador {
         direccion = Direccion.DETENIDO;
         System.out.println("[DETENIDO] Elevador detenido en piso " + pisoActual);
     }
+
+    public boolean agregarPeticion (int piso) {
+        if (piso < pisoMininmo || piso > pisoMaximo) {
+            System.out.println("[ERROR] Piso invalido: " + piso);
+            return false;
+        }
+    }
 }
