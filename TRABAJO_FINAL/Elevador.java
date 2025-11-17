@@ -104,6 +104,7 @@ public class Elevador {
         return false; 
     }
 
+    // Getters
     public int getPisoActual() {
         return pisoActual;
     }
