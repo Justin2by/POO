@@ -60,6 +60,10 @@ public class Elevador {
             parar();
             puerta.abrir();
             
+            botonesInternos.get(pisoActual - 1).cancelarIluminacion();
+            peticiones.remove(Integer.valueOf(pisoActual));
+
+            
         }
     }
 
