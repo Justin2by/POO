@@ -69,4 +69,12 @@ public class Elevador {
         }
     }
 
+    public void determinarDireccion() {
+        if (peticiones.isEmpty()) {
+            direccion = Direccion.DETENIDO;
+            return;
+        }
+
+        int
+    }
 }
