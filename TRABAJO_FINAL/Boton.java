@@ -38,5 +38,9 @@ public class Boton {
     }
 
     // Getters
+    public int getNumeroPiso() {
+        return numeroPiso;
+    }
 
+    
 }
