@@ -25,6 +25,7 @@ public class Puerta {
         return estado == EstadoPuerta.ABIERTA;
     }
 
+    // Getter
     public EstadoPuerta getEstado() {
         return estado;
     }

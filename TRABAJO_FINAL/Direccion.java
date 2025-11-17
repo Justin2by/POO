@@ -2,5 +2,6 @@ package TRABAJO_FINAL;
 
 public enum Direccion {
     SUBIENDO,
-    BAJANDO
+    BAJANDO,
+    DETENIDO
 }
