@@ -112,9 +112,13 @@ public class Elevador {
     public Direccion getDireccion() {
         return direccion;    
     }
-    
+
     public Puerta getPuerta() {
         return puerta;
+    }
+    
+    public List<Integer> getPeticiones() {
+        return new ArrayList<>(peticiones);
     }
 
 }
