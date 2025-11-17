@@ -12,6 +12,7 @@ public class Boton {
 
     /**
      * Constructor para botones dentro del elevador
+     * 
      * @param numeroPiso El número de piso que representa este botón
      */
     public Boton(int numeroPiso) {
@@ -20,19 +21,20 @@ public class Boton {
         this.esBotonPiso = false;
         this.direccionSolicitada = null;
     }
-    
+
     /**
      * Constructor para botones en los pisos
+     * 
      * @param numeroPiso El número de piso donde está ubicado el botón
-     * @param direccion La dirección solicitada (SUBIENDO o BAJANDO)
+     * @param direccion  La dirección solicitada (SUBIENDO o BAJANDO)
      */
-    public Boton(int numeroPiso, Direccion direccion){
+    public Boton(int numeroPiso, Direccion direccion) {
         this.numeroPiso = numeroPiso;
         this.iluminado = false;
         this.esBotonPiso = true;
         this.direccionSolicitada = direccion;
-    } 
-       
+    }
+
     /**
      * Ilumina el botón cuando es presionado
      */
@@ -50,9 +52,10 @@ public class Boton {
         System.out.println(
                 "[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
-    
+
     /**
      * Presiona el botón
+     * 
      * @return true si el botón fue presionado exitosamente
      */
     public boolean presionar() {
@@ -79,5 +82,4 @@ public class Boton {
     public Direccion getDireccionSolicitada() {
         return direccionSolicitada;
     }
-
-}
+}    
