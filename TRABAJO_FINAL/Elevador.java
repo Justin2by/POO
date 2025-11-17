@@ -120,8 +120,12 @@ public class Elevador {
     public List<Integer> getPeticiones() {
         return new ArrayList<>(peticiones);
     }
-    
+
     public boolean tienePeticiones() {
         return !peticiones.isEmpty();
     }
+    
+    public int getPisoMinimo() {
+        return pisoMinimo;
+    }    
 }
