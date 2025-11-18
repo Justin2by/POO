@@ -69,7 +69,7 @@ public class ControlElevador {
                 }
             }
         }
-        
+
         // Asegurar que el elevador se detiene al final
         if (elevador.getDireccion() != Direccion.DETENIDO) {
             elevador.parar();
@@ -84,6 +84,9 @@ public class ControlElevador {
 
     }
 
+    /**
+     * Procesa las solicitudes externas pendientes
+     */
     private void procesarSolicitudesExternas() {
         while (!solicitudesExternas.isEmpty()) {
             Integer piso = solicitudesExternas.poll();
@@ -91,6 +94,11 @@ public class ControlElevador {
         }
     }
 
+    /**
+     * Solicitar el elevador desde un piso especifico
+     * @param numeroPiso El piso desde donde se solicita
+     * @param direccion La direccion deseada (SUBIENDO o BAJANDO)
+     */
     public void solicitarElevador(int numeroPiso, Direccion direccion) {
         if (numeroPiso < 1 || numeroPiso > pisos.size()) {
             System.out.println("[ERROR] Piso invalido: " + numeroPiso);
@@ -99,12 +107,14 @@ public class ControlElevador {
 
         Piso piso = pisos.get(numeroPiso - 1);
 
+        // Presionar el boton correspondiente
         if (direccion == Direccion.SUBIENDO) {
             piso.presionarBotonSubir();
         } else if (direccion == Direccion.BAJANDO) {
             piso.presionarBotonBajar();
         }
-
+        
+        // Agregar a la cola de solicitudes externas
         solicitudesExternas.add(numeroPiso);
     }
 
