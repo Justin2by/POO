@@ -32,9 +32,10 @@ public class Puerta {
             System.out.println("[PUERTA] Abierta");
         }
     }
-    
+
     /**
      * Verifica si la puerta está abierta
+     * 
      * @return true si la puerta está abierta
      */
     public boolean estaAbierta() {
