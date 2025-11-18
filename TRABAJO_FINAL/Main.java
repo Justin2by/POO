@@ -56,26 +56,29 @@ public class Main {
     /**
      * Escenario extra:
      * 1) Reutiliza el estado del elevador después del escenario 1
-     *    (por ejemplo, quedó en reposo en el piso 5).
+     * (por ejemplo, quedó en reposo en el piso 5).
      * 2) Un nuevo pasajero en el piso 1 llama al elevador para SUBIR.
      * 3) Cuando llega el elevador al piso 1, el pasajero presiona el piso 3.
-     * 4) El elevador baja desde donde esté (ej: 5) hasta el piso 1 y luego sube al 3.
+     * 4) El elevador baja desde donde esté (ej: 5) hasta el piso 1 y luego sube al
+     * 3.
      */
     private static void escenarioExtra(ControlElevador control) {
 
-    // Paso 1: la persona llama al ascensor desde el piso 1
-    System.out.println("[INFO] Nuevo pasajero en piso 1 solicita elevador para SUBIR");
-    control.solicitarElevador(1, Direccion.SUBIENDO);
+        // Paso 1: la persona llama al ascensor desde el piso 1
+        System.out.println("[INFO] Nuevo pasajero en piso 1 solicita elevador para SUBIR");
+        control.solicitarElevador(1, Direccion.SUBIENDO);
 
-    // Paso 2: correr el loop para que el ascensor vaya desde donde esté (ej. 5) hasta el 1
-    control.loopControlElevador();
+        // Paso 2: correr el loop para que el ascensor vaya desde donde esté (ej. 5)
+        // hasta el 1
+        control.loopControlElevador();
 
-    // Paso 3: ahora el ascensor ya está en el piso 1; la persona se sube y presiona piso 3
-    System.out.println("[INFO] Pasajero ya dentro del ascensor presiona boton del piso 3");
-    control.presionarBotonInterno(3);
+        // Paso 3: ahora el ascensor ya está en el piso 1; la persona se sube y presiona
+        // piso 3
+        System.out.println("[INFO] Pasajero ya dentro del ascensor presiona boton del piso 3");
+        control.presionarBotonInterno(3);
 
-    // Paso 4: correr el loop otra vez para ir del piso 1 al piso 3
-    control.loopControlElevador();
-}
+        // Paso 4: correr el loop otra vez para ir del piso 1 al piso 3
+        control.loopControlElevador();
+    }
 
 }
