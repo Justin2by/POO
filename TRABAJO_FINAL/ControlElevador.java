@@ -113,11 +113,15 @@ public class ControlElevador {
         } else if (direccion == Direccion.BAJANDO) {
             piso.presionarBotonBajar();
         }
-        
+
         // Agregar a la cola de solicitudes externas
         solicitudesExternas.add(numeroPiso);
     }
-
+    
+    /**
+     * Presionar un boton interno del elevador
+     * @param piso El piso destino
+     */
     public void presionarBotonInterno(int piso) {
         elevador.agregarPeticion(piso);
     }
