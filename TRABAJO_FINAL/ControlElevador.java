@@ -55,46 +55,46 @@ public class ControlElevador {
             }
         }
 
-    if (elevador.getDireccion() != Direccion.DETENIDO) {
-        elevador.parar();
+        if (elevador.getDireccion() != Direccion.DETENIDO) {
+            elevador.parar();
+        }
+
+        System.out.println();
+        System.out.println("========================================================");
+        System.out.println("   Todas las peticiones atendidas");
+        System.out.println("   Elevador en reposo en piso " + elevador.getPisoActual());
+        System.out.println("========================================================");
+        System.out.println();
+
     }
 
-    System.out.println();
-    System.out.println("========================================================");
-    System.out.println("   Todas las peticiones atendidas");
-    System.out.println("   Elevador en reposo en piso " + elevador.getPisoActual());
-    System.out.println("========================================================");
-    System.out.println();
-        
-}
+    private void procesarSolicitudesExternas() {
+        while (!solicitudesExternas.isEmpty()) {
+            Integer piso = solicitudesExternas.poll();
+            elevador.agregarPeticion(piso);
+        }
+    }
 
-private void procesarSolicitudesExternas() {
-    while (!solicitudesExternas.isEmpty()) {
-        Integer piso = solicitudesExternas.poll();
+    public void solicitarElevador(int numeroPiso, Direccion direccion) {
+        if (numeroPiso < 1 || numeroPiso > pisos.size()) {
+            System.out.println("[ERROR] Piso invalido: " + numeroPiso);
+            return;
+        }
+
+        Piso piso = pisos.get(numeroPiso - 1);
+
+        if (direccion == Direccion.SUBIENDO) {
+            piso.presionarBotonSubir();
+        } else if (direccion == Direccion.BAJANDO) {
+            piso.presionarBotonBajar();
+        }
+
+        solicitudesExternas.add(numeroPiso);
+    }
+
+    public void presionarBotonInterno(int piso) {
         elevador.agregarPeticion(piso);
     }
-}
-
-public void solicitarElevador(int numeroPiso, Direccion direccion) {
-    if (numeroPiso < 1 || numeroPiso > pisos.size()) {
-        System.out.println("[ERROR] Piso invalido: " + numeroPiso);
-        return;
-    }
-
-    Piso piso = pisos.get(numeroPiso -1);
-
-    if (direccion == Direccion.SUBIENDO) {
-        piso.presionarBotonSubir();   
-    } else if (direccion == Direccion.BAJANDO) {
-        piso.presionarBotonBajar();
-    }
-
-    solicitudesExternas.add(numeroPiso);
-}
-
-public void presionarBotonInterno(int piso) {
-    elevador.agregarPeticion(piso);
-}
 
     // Getters
     public Elevador getElevador() {
@@ -105,5 +105,3 @@ public void presionarBotonInterno(int piso) {
         return pisos;
     }
 }
-
-
