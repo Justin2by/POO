@@ -92,5 +92,7 @@ public void solicitarElevador(int numeroPiso, Direccion direccion) {
     solicitudesExternas.add(numeroPiso);
 }
 
-public
+public void presionarBotonInterno(int piso) {
+    elevador.agregarPeticion(piso);
+}
 
