@@ -3,16 +3,16 @@
 ╚════════════════════════════════════════════════════════════════════════════╝
 
 PROYECTO: Sistema de Control de Ascensor
-CURSO: Programación Orientada a Objetos
+CURSO: Programación Orientada a Objetos 
 LENGUAJE: Java
-TOTAL DE ARCHIVOS: 8 archivos .java
+TOTAL DE ARCHIVOS: 8 archivos .java 
 
 ═══════════════════════════════════════════════════════════════════════════
 1. ARCHIVOS INCLUIDOS 
 ═══════════════════════════════════════════════════════════════════════════
 
 ENUMERACIONES (2 archivos):
-  ☑ Direccion.java       → Define: SUBIENDO, BAJANDO, DETENIDO
+  ☑ Direccion.java       → Define: SUBIENDO, BAJANDO, DETENIDO 
   ☑ EstadoPuerta.java    → Define: ABIERTA, CERRADA
 
 CLASES AUXILIARES (3 archivos):
@@ -28,7 +28,7 @@ PROGRAMA EJECUTABLE (1 archivo):
   ☑ Main.java            → Programa principal con escenarios de prueba
 
 ═══════════════════════════════════════════════════════════════════════════
-2. REQUISITOS IMPLEMENTADOS (según documento UML)
+2. REQUISITOS IMPLEMENTADOS (según documento UML) 
 ═══════════════════════════════════════════════════════════════════════════
 
 ✓ REQUISITO 1: Cada elevador tiene botones para cada piso
@@ -44,7 +44,7 @@ PROGRAMA EJECUTABLE (1 archivo):
   → Implementado en: Piso.java (botonSubir, botonBajar)
 
 ✓ REQUISITO 5: Primer piso solo tiene botón de subir
-  → Implementado en: Piso.java (constructor con validación) 
+  → Implementado en: Piso.java (constructor con validación)  
 
 ✓ REQUISITO 6: Último piso solo tiene botón de bajar
   → Implementado en: Piso.java (constructor con validación)
@@ -83,7 +83,7 @@ El método loopControlElevador() implementa el pseudocódigo especificado:
   - Complejidad interna oculta
 
 ✓ MODULARIDAD:
-  - Una responsabilidad por clase
+  - Una responsabilidad por clase 
   - Separación clara de funcionalidades
   - Fácil de mantener y extender
 
@@ -103,7 +103,7 @@ ESCENARIO 1: Uso básico
 
 ESCENARIO 2: Múltiples solicitudes
   - Varios pasajeros en pisos diferentes
-  - Solicitudes simultáneas de subir y bajar
+  - Solicitudes simultáneas de subir y bajar 
   - Sistema optimiza el recorrido
 
 ═══════════════════════════════════════════════════════════════════════════
@@ -114,7 +114,7 @@ El programa muestra:
   - Estado de los botones (iluminado/apagado) 
   - Movimiento del elevador (subiendo/bajando)
   - Piso actual en cada momento
-  - Apertura y cierre de puertas
+  - Apertura y cierre de puertas 
   - Atención de pasajeros
   - Estado final del sistema
 
@@ -137,7 +137,7 @@ Ejemplo de salida:
 ========================================================
 
 [DETENIDO] Elevador detenido en piso 1
-[PUERTA] Abierta
+[PUERTA] Abierta 
 [APAGADO] Boton del piso 1
 [ATENCION] Pasajeros descendiendo/abordando en piso 1
 [PUERTA] Cerrada
@@ -164,7 +164,7 @@ El sistema valida correctamente las entradas:
 
 PRUEBA 1: Piso válido
   Entrada: control.solicitarElevador(3, Direccion.SUBIENDO);
-  Resultado: Elevador se mueve al piso 3
+  Resultado: Elevador se mueve al piso 3 
 
 PRUEBA 2: Piso inválido (negativo)
   Entrada: control.solicitarElevador(-1, Direccion.SUBIENDO); 
@@ -185,7 +185,7 @@ PRUEBA 4: Múltiples solicitudes válidas
 8. ESTRUCTURA DE CLASES
 ═══════════════════════════════════════════════════════════════════════════
 
-Direccion (Enum)
+Direccion (Enum) 
   └─ Usado por: Boton, Elevador, Piso, ControlElevador 
 
 EstadoPuerta (Enum) 
@@ -209,7 +209,7 @@ Elevador
 
 ControlElevador
   ├─ Depende de: Elevador, Piso, Direccion
-  └─ Usado por: Main
+  └─ Usado por: Main 
 
 Main
   └─ Depende de: ControlElevador, Direccion 
@@ -220,7 +220,7 @@ Main
 
 Para verificar que todo funciona correctamente:
 
-1. Ejecutar: java Main
+1. Ejecutar: java Main 
    → Debe ejecutar los 3 escenarios
    → Debe mostrar el movimiento del elevador
    → Debe finalizar correctamente
