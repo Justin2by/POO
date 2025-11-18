@@ -38,5 +38,7 @@ public class Main {
         
         System.out.println();
         control.presionarBotonInterno(5);
+
+        control.loopControlElevador();
     }
 }
