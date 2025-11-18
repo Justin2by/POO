@@ -29,7 +29,7 @@ public class Puerta {
     public void cerrar() {
         if (estado == EstadoPuerta.ABIERTA) {
             estado = EstadoPuerta.CERRADA;
-            System.out.println("[PUERTA] Abierta");
+            System.out.println("[PUERTA] Cerrada");
         }
     }
 
