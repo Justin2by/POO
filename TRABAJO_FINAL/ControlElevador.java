@@ -84,7 +84,13 @@ public void solicitarElevador(int numeroPiso, Direccion direccion) {
     Piso piso = pisos.get(numeroPiso -1);
 
     if (direccion == Direccion.SUBIENDO) {
-        
+        piso.presionarBotonSubir();   
+    } else if (direccion == Direccion.BAJANDO) {
+        piso.presionarBotonBajar();
     }
+
+    solicitudesExternas.add(numeroPiso);
 }
+
+public
 
