@@ -43,10 +43,10 @@ public class Main {
      * Un pasajero en el piso 1 quiere ir al piso 5
      */
     private static void escenario1(ControlElevador control) {
-        System.out.println();
+        System.out.println("[INFO] Pasajero en piso 1 solicita elevador para SUBIR");
         control.solicitarElevador(1, Direccion.SUBIENDO);
 
-        System.out.println();
+        System.out.println("[INFO] Pasajero aborda y presiona boton del piso 5");
         control.presionarBotonInterno(5);
 
         // Ejecutar el control del elevador
