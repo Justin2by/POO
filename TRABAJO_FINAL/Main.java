@@ -14,9 +14,12 @@ public class Main {
         System.out.println();
 
         System.out.println();
-        System.out.println();
+        System.out.println("--- ESCENARIO 1: Uso basico del elevador ---");
         System.out.println();
         escenario1(control);
+        
+        control = new ControlElevador(numeroPisos);
+
         
 
     }
