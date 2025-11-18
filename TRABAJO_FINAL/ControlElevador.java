@@ -10,7 +10,7 @@ public class ControlElevador {
     private Elevador elevador;
     private List<Piso> pisos;
     private Queue<Integer> solicitudesExternas;
-    
+
     /**
      * Constructor del controlador
      * @param numeroPisos Cantidad total de pisos del edificio
@@ -28,6 +28,9 @@ public class ControlElevador {
         }
     }
 
+    /**
+     * Loop principal de control del elevador
+     */
     public void loopControlElevador() {
         System.out.println();
         System.out.println("========================================================");
