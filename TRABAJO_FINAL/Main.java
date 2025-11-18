@@ -19,7 +19,11 @@ public class Main {
         escenario1(control);
         
         control = new ControlElevador(numeroPisos);
-
+        
+        System.out.println();
+        System.out.println("--- ESCENARIO 2: Multiples solicitudes ---");
+        System.out.println();
+        escenario2(control);
         
 
     }
