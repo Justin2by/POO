@@ -28,7 +28,7 @@ PROGRAMA EJECUTABLE (1 archivo):
   ☑ Main.java            → Programa principal con escenarios de prueba
 
 ═══════════════════════════════════════════════════════════════════════════
-2. REQUISITOS IMPLEMENTADOS (según documento UML) 
+2. REQUISITOS IMPLEMENTADOS
 ═══════════════════════════════════════════════════════════════════════════
 
 ✓ REQUISITO 1: Cada elevador tiene botones para cada piso
@@ -53,7 +53,7 @@ PROGRAMA EJECUTABLE (1 archivo):
   → Implementado en: ControlElevador.java (loopControlElevador()) 
 
 ═══════════════════════════════════════════════════════════════════════════
-3. ALGORITMO DE CONTROL (basado en pseudocódigo del documento)
+3. ALGORITMO DE CONTROL
 ═══════════════════════════════════════════════════════════════════════════
 
 El método loopControlElevador() implementa el pseudocódigo especificado:
