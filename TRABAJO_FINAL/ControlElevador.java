@@ -54,7 +54,6 @@ public class ControlElevador {
                 }
             }
         }
-    }
 
     if (elevador.getDireccion() != Direccion.DETENIDO) {
         elevador.parar();
@@ -62,8 +61,8 @@ public class ControlElevador {
 
     System.out.println();
     System.out.println("========================================================");
-    System.out.println();
-    System.out.println();
+    System.out.println("   Todas las peticiones atendidas");
+    System.out.println("   Elevador en reposo en piso " + elevador.getPisoActual());
     System.out.println("========================================================");
     System.out.println();
         
