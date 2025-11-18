@@ -167,7 +167,7 @@ PRUEBA 1: Piso válido
   Resultado: Elevador se mueve al piso 3
 
 PRUEBA 2: Piso inválido (negativo)
-  Entrada: control.solicitarElevador(-1, Direccion.SUBIENDO);
+  Entrada: control.solicitarElevador(-1, Direccion.SUBIENDO); 
   Resultado: [ERROR] Piso invalido: -1
   Comportamiento: El sistema no intenta ir al piso, ignora la solicitud
 
@@ -177,7 +177,7 @@ PRUEBA 3: Piso inválido (mayor al máximo)
   Comportamiento: El sistema no intenta ir al piso, ignora la solicitud
 
 PRUEBA 4: Múltiples solicitudes válidas
-  Entrada: control.solicitarElevador(2, Direccion.SUBIENDO);
+  Entrada: control.solicitarElevador(2, Direccion.SUBIENDO); 
            control.solicitarElevador(5, Direccion.BAJANDO);
   Resultado: Elevador atiende ambos pisos correctamente
 
@@ -186,10 +186,10 @@ PRUEBA 4: Múltiples solicitudes válidas
 ═══════════════════════════════════════════════════════════════════════════
 
 Direccion (Enum)
-  └─ Usado por: Boton, Elevador, Piso, ControlElevador
+  └─ Usado por: Boton, Elevador, Piso, ControlElevador 
 
-EstadoPuerta (Enum)
-  └─ Usado por: Puerta
+EstadoPuerta (Enum) 
+  └─ Usado por: Puerta 
 
 Boton
   ├─ Depende de: Direccion
@@ -197,14 +197,14 @@ Boton
 
 Puerta
   ├─ Depende de: EstadoPuerta
-  └─ Usado por: Elevador
+  └─ Usado por: Elevador 
 
 Piso
   ├─ Depende de: Boton, Direccion
   └─ Usado por: ControlElevador
 
 Elevador
-  ├─ Depende de: Direccion, Puerta, Boton
+  ├─ Depende de: Direccion, Puerta, Boton 
   └─ Usado por: ControlElevador
 
 ControlElevador
@@ -212,10 +212,10 @@ ControlElevador
   └─ Usado por: Main
 
 Main
-  └─ Depende de: ControlElevador, Direccion
+  └─ Depende de: ControlElevador, Direccion 
 
 ═══════════════════════════════════════════════════════════════════════════
-9. VERIFICACIÓN DE FUNCIONAMIENTO
+9. VERIFICACIÓN DE FUNCIONAMIENTO 
 ═══════════════════════════════════════════════════════════════════════════
 
 Para verificar que todo funciona correctamente:
@@ -226,11 +226,11 @@ Para verificar que todo funciona correctamente:
    → Debe finalizar correctamente
 
 2. Verificar salida:
-   → Botones se iluminan y apagan correctamente
+   → Botones se iluminan y apagan correctamente 
    → Elevador se mueve en la dirección correcta
-   → Puertas se abren y cierran en cada parada
+   → Puertas se abren y cierran en cada parada 
    → Pasajeros son atendidos en cada piso
-   → Sistema finaliza con mensaje de éxito
+   → Sistema finaliza con mensaje de éxito 
 
 ═══════════════════════════════════════════════════════════════════════════
 10. DETALLES TÉCNICOS
@@ -238,10 +238,10 @@ Para verificar que todo funciona correctamente:
 
 • Todos los métodos especificados en el documento están implementados:
   - boton::iluminar
-  - boton::cancelar_iluminacion
+  - boton::cancelar_iluminacion 
   - puerta::abrir
   - puerta::cerrar
-  - elevador::mover
+  - elevador::mover 
   - elevador::parar
 
 • El sistema usa etiquetas de texto ASCII para compatibilidad:
@@ -250,23 +250,23 @@ Para verificar que todo funciona correctamente:
   - [MOVIMIENTO] - Elevador en movimiento
   - [DETENIDO] - Elevador detenido
   - [PUERTA] - Estado de la puerta
-  - [ATENCION] - Atendiendo pasajeros
+  - [ATENCION] - Atendiendo pasajeros 
   - [INFO] - Información general
   - [ERROR] - Error en la operación
-  - [OK] - Operación exitosa
+  - [OK] - Operación exitosa 
 
 CONCLUSIÓN:
-El sistema implementa completamente el problema del elevador según las
+El sistema implementa completamente el problema del elevador según las 
 especificaciones del documento UML proporcionado, utilizando correctamente
-los principios de Programación Orientada a Objetos en Java.
+los principios de Programación Orientada a Objetos en Java. 
 
 El proyecto demuestra comprensión sólida de:
 - Análisis de problemas y diseño de soluciones
 - Programación Orientada a Objetos
-- Implementación de algoritmos
+- Implementación de algoritmos 
 - Validación de datos
-- Desarrollo de software profesional
+- Desarrollo de software profesional 
 
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                         FIN DEL DOCUMENTO                                  ║
+║                          FIN DEL DOCUMENTO                                 ║
 ╚════════════════════════════════════════════════════════════════════════════╝
