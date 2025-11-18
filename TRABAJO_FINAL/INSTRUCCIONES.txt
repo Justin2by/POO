@@ -16,12 +16,12 @@ ENUMERACIONES (2 archivos):
   ☑ EstadoPuerta.java    → Define: ABIERTA, CERRADA
 
 CLASES AUXILIARES (3 archivos):
-  ☑ Boton.java           → Representa botones del sistema
-  ☑ Puerta.java          → Control de puertas del elevador
+  ☑ Boton.java           → Representa botones del sistema 
+  ☑ Puerta.java          → Control de puertas del elevador 
   ☑ Piso.java            → Representa un piso del edificio
 
 CLASES PRINCIPALES (2 archivos):
-  ☑ Elevador.java        → Lógica del elevador físico
+  ☑ Elevador.java        → Lógica del elevador físico 
   ☑ ControlElevador.java → Controlador principal del sistema
 
 PROGRAMA EJECUTABLE (1 archivo):
@@ -38,19 +38,19 @@ PROGRAMA EJECUTABLE (1 archivo):
   → Implementado en: Boton.java (método iluminar())
 
 ✓ REQUISITO 3: La iluminación se cancela al llegar al piso
-  → Implementado en: Boton.java (método cancelarIluminacion())
+  → Implementado en: Boton.java (método cancelarIluminacion()) 
 
 ✓ REQUISITO 4: Cada piso tiene botones de subir/bajar
   → Implementado en: Piso.java (botonSubir, botonBajar)
 
 ✓ REQUISITO 5: Primer piso solo tiene botón de subir
-  → Implementado en: Piso.java (constructor con validación)
+  → Implementado en: Piso.java (constructor con validación) 
 
 ✓ REQUISITO 6: Último piso solo tiene botón de bajar
   → Implementado en: Piso.java (constructor con validación)
 
 ✓ REQUISITO 7: Elevador permanece detenido sin requerimientos
-  → Implementado en: ControlElevador.java (loopControlElevador())
+  → Implementado en: ControlElevador.java (loopControlElevador()) 
 
 ═══════════════════════════════════════════════════════════════════════════
 3. ALGORITMO DE CONTROL (basado en pseudocódigo del documento)
@@ -61,7 +61,7 @@ El método loopControlElevador() implementa el pseudocódigo especificado:
 1. WHILE hay peticiones pendientes:
    a. Procesar solicitudes externas
    b. Determinar dirección óptima
-   c. Mover elevador hacia pisos solicitados
+   c. Mover elevador hacia pisos solicitados 
    d. Atender pisos solicitados
    e. Cancelar iluminación de botones
    f. Cambiar dirección si es necesario
@@ -74,7 +74,7 @@ El método loopControlElevador() implementa el pseudocódigo especificado:
 
 ✓ ENCAPSULAMIENTO:
   - Todos los atributos son private
-  - Acceso controlado mediante getters/setters
+  - Acceso controlado mediante getters/setters 
   - Validación en los métodos
 
 ✓ ABSTRACCIÓN:
@@ -90,7 +90,7 @@ El método loopControlElevador() implementa el pseudocódigo especificado:
 ✓ REUTILIZACIÓN:
   - Código genérico (parámetro numeroPisos)
   - Clases reutilizables
-  - Diseño flexible
+  - Diseño flexible 
 
 ═══════════════════════════════════════════════════════════════════════════
 5. ESCENARIOS DE PRUEBA INCLUIDOS
@@ -99,7 +99,7 @@ El método loopControlElevador() implementa el pseudocódigo especificado:
 ESCENARIO 1: Uso básico
   - Pasajero en piso 1 solicita subir
   - Presiona botón del piso 5
-  - Elevador sube del piso 1 al 5
+  - Elevador sube del piso 1 al 5 
 
 ESCENARIO 2: Múltiples solicitudes
   - Varios pasajeros en pisos diferentes
@@ -111,7 +111,7 @@ ESCENARIO 2: Múltiples solicitudes
 ═══════════════════════════════════════════════════════════════════════════
 
 El programa muestra:
-  - Estado de los botones (iluminado/apagado)
+  - Estado de los botones (iluminado/apagado) 
   - Movimiento del elevador (subiendo/bajando)
   - Piso actual en cada momento
   - Apertura y cierre de puertas
@@ -121,7 +121,7 @@ El programa muestra:
 Ejemplo de salida:
 
 ========================================================
-     SISTEMA DE ASCENSOR - EDIFICIO 10 PISOS
+     SISTEMA DE ASCENSOR - EDIFICIO 10 PISOS 
 ========================================================
 
 --- ESCENARIO 1: Una sola persona usa el elevador ---
@@ -130,7 +130,7 @@ Ejemplo de salida:
 [ILUMINADO] Boton del piso 1 (SUBIENDO)
 [INFO] Pasajero aborda y presiona boton del piso 5
 [ILUMINADO] Boton del piso 5
-[OK] Peticion agregada para piso 5
+[OK] Peticion agregada para piso 5 
 
 ========================================================
          SISTEMA DE CONTROL DE ELEVADOR
@@ -141,14 +141,14 @@ Ejemplo de salida:
 [APAGADO] Boton del piso 1
 [ATENCION] Pasajeros descendiendo/abordando en piso 1
 [PUERTA] Cerrada
-[MOVIMIENTO] Elevador subiendo... Piso actual: 2
+[MOVIMIENTO] Elevador subiendo... Piso actual: 2 
 [MOVIMIENTO] Elevador subiendo... Piso actual: 3
 [MOVIMIENTO] Elevador subiendo... Piso actual: 4
 [MOVIMIENTO] Elevador subiendo... Piso actual: 5
 [DETENIDO] Elevador detenido en piso 5
 [PUERTA] Abierta
 [APAGADO] Boton del piso 5
-[ATENCION] Pasajeros descendiendo/abordando en piso 5
+[ATENCION] Pasajeros descendiendo/abordando en piso 5 
 [PUERTA] Cerrada
 
 ========================================================
@@ -157,7 +157,7 @@ Ejemplo de salida:
 ========================================================
 
 ═══════════════════════════════════════════════════════════════════════════
-7. VALIDACIÓN DE ENTRADA
+7. VALIDACIÓN DE ENTRADA 
 ═══════════════════════════════════════════════════════════════════════════
 
 El sistema valida correctamente las entradas:
