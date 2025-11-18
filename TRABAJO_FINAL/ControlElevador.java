@@ -38,9 +38,13 @@ public class ControlElevador {
         System.out.println("========================================================");
         System.out.println();
 
+        // Procesar solicitudes externas primero
         procesarSolicitudesExternas();
 
+        // Mientras haya peticiones pendientes
         while (elevador.tienePeticiones()) {
+
+            
             if (elevador.getPeticiones().contains(elevador.getPisoActual())) {
                 elevador.atenderPisoActual();
 
