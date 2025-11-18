@@ -124,7 +124,7 @@ Ejemplo de salida:
      SISTEMA DE ASCENSOR - EDIFICIO 10 PISOS
 ========================================================
 
---- ESCENARIO 1: Uso basico del elevador ---
+--- ESCENARIO 1: Una persona usa el elevador ---
 
 [INFO] Pasajero en piso 1 solicita elevador para SUBIR
 [ILUMINADO] Boton del piso 1 (SUBIENDO)

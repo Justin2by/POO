@@ -68,7 +68,7 @@ public class Elevador {
             return false;
         }
 
-        if (!peticiones.contains(piso) && piso != pisoActual) {
+        if (!peticiones.contains(piso) ) {
             peticiones.add(piso);
             // Iluminar el boton correspondiente
             botonesInternos.get(piso - 1).iluminar();
