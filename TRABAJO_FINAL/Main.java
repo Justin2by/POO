@@ -19,7 +19,7 @@ public class Main {
 
         // Escenario 1: Simulación básica
         System.out.println();
-        System.out.println("--- ESCENARIO 1: Uso basico del elevador ---");
+        System.out.println("--- ESCENARIO 1: Una sola persona usa el elevador ---");
         System.out.println();
         escenario1(control);
 
