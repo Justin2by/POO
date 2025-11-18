@@ -1,0 +1,272 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                SISTEMA DE ASCENSOR - INSTRUCCIONES PARA USO                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+PROYECTO: Sistema de Control de Ascensor
+CURSO: Programación Orientada a Objetos
+LENGUAJE: Java
+TOTAL DE ARCHIVOS: 8 archivos .java
+
+═══════════════════════════════════════════════════════════════════════════
+1. ARCHIVOS INCLUIDOS
+═══════════════════════════════════════════════════════════════════════════
+
+ENUMERACIONES (2 archivos):
+  ☑ Direccion.java       → Define: SUBIENDO, BAJANDO, DETENIDO
+  ☑ EstadoPuerta.java    → Define: ABIERTA, CERRADA
+
+CLASES AUXILIARES (3 archivos):
+  ☑ Boton.java           → Representa botones del sistema
+  ☑ Puerta.java          → Control de puertas del elevador
+  ☑ Piso.java            → Representa un piso del edificio
+
+CLASES PRINCIPALES (2 archivos):
+  ☑ Elevador.java        → Lógica del elevador físico
+  ☑ ControlElevador.java → Controlador principal del sistema
+
+PROGRAMA EJECUTABLE (1 archivo):
+  ☑ Main.java            → Programa principal con escenarios de prueba
+
+═══════════════════════════════════════════════════════════════════════════
+2. REQUISITOS IMPLEMENTADOS (según documento UML)
+═══════════════════════════════════════════════════════════════════════════
+
+✓ REQUISITO 1: Cada elevador tiene botones para cada piso
+  → Implementado en: Elevador.java (botonesInternos)
+
+✓ REQUISITO 2: Los botones se iluminan cuando son presionados
+  → Implementado en: Boton.java (método iluminar())
+
+✓ REQUISITO 3: La iluminación se cancela al llegar al piso
+  → Implementado en: Boton.java (método cancelarIluminacion())
+
+✓ REQUISITO 4: Cada piso tiene botones de subir/bajar
+  → Implementado en: Piso.java (botonSubir, botonBajar)
+
+✓ REQUISITO 5: Primer piso solo tiene botón de subir
+  → Implementado en: Piso.java (constructor con validación)
+
+✓ REQUISITO 6: Último piso solo tiene botón de bajar
+  → Implementado en: Piso.java (constructor con validación)
+
+✓ REQUISITO 7: Elevador permanece detenido sin requerimientos
+  → Implementado en: ControlElevador.java (loopControlElevador())
+
+═══════════════════════════════════════════════════════════════════════════
+3. ALGORITMO DE CONTROL (basado en pseudocódigo del documento)
+═══════════════════════════════════════════════════════════════════════════
+
+El método loopControlElevador() implementa el pseudocódigo especificado:
+
+1. WHILE hay peticiones pendientes:
+   a. Procesar solicitudes externas
+   b. Determinar dirección óptima
+   c. Mover elevador hacia pisos solicitados
+   d. Atender pisos solicitados
+   e. Cancelar iluminación de botones
+   f. Cambiar dirección si es necesario
+
+2. Cuando no hay más peticiones: elevador queda en reposo
+
+═══════════════════════════════════════════════════════════════════════════
+4. PRINCIPIOS DE POO APLICADOS
+═══════════════════════════════════════════════════════════════════════════
+
+✓ ENCAPSULAMIENTO:
+  - Todos los atributos son private
+  - Acceso controlado mediante getters/setters
+  - Validación en los métodos
+
+✓ ABSTRACCIÓN:
+  - Clases representan conceptos del mundo real
+  - Métodos con nombres descriptivos
+  - Complejidad interna oculta
+
+✓ MODULARIDAD:
+  - Una responsabilidad por clase
+  - Separación clara de funcionalidades
+  - Fácil de mantener y extender
+
+✓ REUTILIZACIÓN:
+  - Código genérico (parámetro numeroPisos)
+  - Clases reutilizables
+  - Diseño flexible
+
+═══════════════════════════════════════════════════════════════════════════
+5. ESCENARIOS DE PRUEBA INCLUIDOS
+═══════════════════════════════════════════════════════════════════════════
+
+ESCENARIO 1: Uso básico
+  - Pasajero en piso 1 solicita subir
+  - Presiona botón del piso 5
+  - Elevador sube del piso 1 al 5
+
+ESCENARIO 2: Múltiples solicitudes
+  - Varios pasajeros en pisos diferentes
+  - Solicitudes simultáneas de subir y bajar
+  - Sistema optimiza el recorrido
+
+═══════════════════════════════════════════════════════════════════════════
+6. SALIDA ESPERADA DEL PROGRAMA
+═══════════════════════════════════════════════════════════════════════════
+
+El programa muestra:
+  - Estado de los botones (iluminado/apagado)
+  - Movimiento del elevador (subiendo/bajando)
+  - Piso actual en cada momento
+  - Apertura y cierre de puertas
+  - Atención de pasajeros
+  - Estado final del sistema
+
+Ejemplo de salida:
+
+========================================================
+     SISTEMA DE ASCENSOR - EDIFICIO 10 PISOS
+========================================================
+
+--- ESCENARIO 1: Uso basico del elevador ---
+
+[INFO] Pasajero en piso 1 solicita elevador para SUBIR
+[ILUMINADO] Boton del piso 1 (SUBIENDO)
+[INFO] Pasajero aborda y presiona boton del piso 5
+[ILUMINADO] Boton del piso 5
+[OK] Peticion agregada para piso 5
+
+========================================================
+         SISTEMA DE CONTROL DE ELEVADOR
+========================================================
+
+[DETENIDO] Elevador detenido en piso 1
+[PUERTA] Abierta
+[APAGADO] Boton del piso 1
+[ATENCION] Pasajeros descendiendo/abordando en piso 1
+[PUERTA] Cerrada
+[MOVIMIENTO] Elevador subiendo... Piso actual: 2
+[MOVIMIENTO] Elevador subiendo... Piso actual: 3
+[MOVIMIENTO] Elevador subiendo... Piso actual: 4
+[MOVIMIENTO] Elevador subiendo... Piso actual: 5
+[DETENIDO] Elevador detenido en piso 5
+[PUERTA] Abierta
+[APAGADO] Boton del piso 5
+[ATENCION] Pasajeros descendiendo/abordando en piso 5
+[PUERTA] Cerrada
+
+========================================================
+   Todas las peticiones atendidas
+   Elevador en reposo en piso 5
+========================================================
+
+═══════════════════════════════════════════════════════════════════════════
+7. VALIDACIÓN DE ENTRADA
+═══════════════════════════════════════════════════════════════════════════
+
+El sistema valida correctamente las entradas:
+
+PRUEBA 1: Piso válido
+  Entrada: control.solicitarElevador(3, Direccion.SUBIENDO);
+  Resultado: Elevador se mueve al piso 3
+
+PRUEBA 2: Piso inválido (negativo)
+  Entrada: control.solicitarElevador(-1, Direccion.SUBIENDO);
+  Resultado: [ERROR] Piso invalido: -1
+  Comportamiento: El sistema no intenta ir al piso, ignora la solicitud
+
+PRUEBA 3: Piso inválido (mayor al máximo)
+  Entrada: control.presionarBotonInterno(15); // En edificio de 10 pisos
+  Resultado: [ERROR] Piso invalido: 15
+  Comportamiento: El sistema no intenta ir al piso, ignora la solicitud
+
+PRUEBA 4: Múltiples solicitudes válidas
+  Entrada: control.solicitarElevador(2, Direccion.SUBIENDO);
+           control.solicitarElevador(5, Direccion.BAJANDO);
+  Resultado: Elevador atiende ambos pisos correctamente
+
+═══════════════════════════════════════════════════════════════════════════
+8. ESTRUCTURA DE CLASES
+═══════════════════════════════════════════════════════════════════════════
+
+Direccion (Enum)
+  └─ Usado por: Boton, Elevador, Piso, ControlElevador
+
+EstadoPuerta (Enum)
+  └─ Usado por: Puerta
+
+Boton
+  ├─ Depende de: Direccion
+  └─ Usado por: Elevador, Piso
+
+Puerta
+  ├─ Depende de: EstadoPuerta
+  └─ Usado por: Elevador
+
+Piso
+  ├─ Depende de: Boton, Direccion
+  └─ Usado por: ControlElevador
+
+Elevador
+  ├─ Depende de: Direccion, Puerta, Boton
+  └─ Usado por: ControlElevador
+
+ControlElevador
+  ├─ Depende de: Elevador, Piso, Direccion
+  └─ Usado por: Main
+
+Main
+  └─ Depende de: ControlElevador, Direccion
+
+═══════════════════════════════════════════════════════════════════════════
+9. VERIFICACIÓN DE FUNCIONAMIENTO
+═══════════════════════════════════════════════════════════════════════════
+
+Para verificar que todo funciona correctamente:
+
+1. Ejecutar: java Main
+   → Debe ejecutar los 3 escenarios
+   → Debe mostrar el movimiento del elevador
+   → Debe finalizar correctamente
+
+2. Verificar salida:
+   → Botones se iluminan y apagan correctamente
+   → Elevador se mueve en la dirección correcta
+   → Puertas se abren y cierran en cada parada
+   → Pasajeros son atendidos en cada piso
+   → Sistema finaliza con mensaje de éxito
+
+═══════════════════════════════════════════════════════════════════════════
+10. DETALLES TÉCNICOS
+═══════════════════════════════════════════════════════════════════════════
+
+• Todos los métodos especificados en el documento están implementados:
+  - boton::iluminar
+  - boton::cancelar_iluminacion
+  - puerta::abrir
+  - puerta::cerrar
+  - elevador::mover
+  - elevador::parar
+
+• El sistema usa etiquetas de texto ASCII para compatibilidad:
+  - [ILUMINADO] - Botón iluminado
+  - [APAGADO] - Botón apagado
+  - [MOVIMIENTO] - Elevador en movimiento
+  - [DETENIDO] - Elevador detenido
+  - [PUERTA] - Estado de la puerta
+  - [ATENCION] - Atendiendo pasajeros
+  - [INFO] - Información general
+  - [ERROR] - Error en la operación
+  - [OK] - Operación exitosa
+
+CONCLUSIÓN:
+El sistema implementa completamente el problema del elevador según las
+especificaciones del documento UML proporcionado, utilizando correctamente
+los principios de Programación Orientada a Objetos en Java.
+
+El proyecto demuestra comprensión sólida de:
+- Análisis de problemas y diseño de soluciones
+- Programación Orientada a Objetos
+- Implementación de algoritmos
+- Validación de datos
+- Desarrollo de software profesional
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                         FIN DEL DOCUMENTO                                  ║
+╚════════════════════════════════════════════════════════════════════════════╝
