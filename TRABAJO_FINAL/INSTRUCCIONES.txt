@@ -221,7 +221,7 @@ Main
 Para verificar que todo funciona correctamente:
 
 1. Ejecutar: java Main 
-   → Debe ejecutar los 3 escenarios
+   → Debe ejecutar los escenarios
    → Debe mostrar el movimiento del elevador
    → Debe finalizar correctamente
 
