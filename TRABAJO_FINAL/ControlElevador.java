@@ -96,3 +96,14 @@ public void presionarBotonInterno(int piso) {
     elevador.agregarPeticion(piso);
 }
 
+    // Getters
+    public Elevador getElevador() {
+        return elevador;
+    }
+
+    public List<Piso> getPisos() {
+        return pisos;
+    }
+}
+
+
