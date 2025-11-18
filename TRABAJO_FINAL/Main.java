@@ -27,11 +27,6 @@ public class Main {
         control = new ControlElevador(numeroPisos);
 
         System.out.println();
-        System.out.println("--- ESCENARIO 2: Multiples solicitudes ---");
-        System.out.println();
-        escenario2(control);
-
-        System.out.println();
         System.out.println("========================================================");
         System.out.println("           SIMULACION COMPLETADA CON EXITO");
         System.out.println("========================================================");
@@ -48,31 +43,6 @@ public class Main {
 
         System.out.println("[INFO] Pasajero aborda y presiona boton del piso 5");
         control.presionarBotonInterno(5);
-
-        // Ejecutar el control del elevador
-        control.loopControlElevador();
-    }
-
-    /**
-     * Escenario 2: Múltiples solicitudes
-     * Varios pasajeros en diferentes pisos
-     */
-    private static void escenario2(ControlElevador control) {
-        System.out.println("[INFO] Pasajero en piso 3 solicita elevador para SUBIR");
-        control.solicitarElevador(3, Direccion.SUBIENDO);
-
-        System.out.println("[INFO] Pasajero en piso 7 solicita elevador para BAJAR");
-        control.solicitarElevador(7, Direccion.BAJANDO);
-
-        System.out.println("[INFO] Pasajero en piso 2 solicita elevador para SUBIR");
-        control.solicitarElevador(2, Direccion.SUBIENDO);
-
-        // Simular que los pasajeros presionan botones internos
-        System.out.println();
-        System.out.println("[INFO] Pasajeros abordan y presionan sus destinos:");
-        control.presionarBotonInterno(8); // Pasajero del piso 3 va a piso 8
-        control.presionarBotonInterno(1); // Pasajero del piso 7 va a piso 1
-        control.presionarBotonInterno(6); // Pasajero del piso 2 va a piso 6
 
         // Ejecutar el control del elevador
         control.loopControlElevador();
