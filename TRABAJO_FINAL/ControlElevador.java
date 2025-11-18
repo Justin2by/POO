@@ -77,7 +77,14 @@ private void procesarSolicitudesExternas() {
 
 public void solicitarElevador(int numeroPiso, Direccion direccion) {
     if (numeroPiso < 1 || numeroPiso > pisos.size()) {
-        System.out.println("[ERROR]")
+        System.out.println("[ERROR] Piso invalido: " + numeroPiso);
+        return;
+    }
+
+    Piso piso = pisos.get(numeroPiso -1);
+
+    if (direccion == Direccion.SUBIENDO) {
+        
     }
 }
 
