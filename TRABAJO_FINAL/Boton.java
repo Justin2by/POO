@@ -53,19 +53,6 @@ public class Boton {
                 "[APAGADO] Boton del piso " + numeroPiso + (esBotonPiso ? " (" + direccionSolicitada + ")" : ""));
     }
 
-    /**
-     * Presiona el botón
-     * 
-     * @return true si el botón fue presionado exitosamente
-     */
-    public boolean presionar() {
-        if (!iluminado) {
-            iluminar();
-            return true;
-        }
-        return false;
-    }
-
     // Getters
     public int getNumeroPiso() {
         return numeroPiso;

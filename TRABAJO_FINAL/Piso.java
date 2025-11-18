@@ -40,7 +40,7 @@ public class Piso {
      */
     public void presionarBotonSubir() {
         if (botonSubir != null) {
-            botonSubir.presionar();
+            botonSubir.iluminar();
         }
     }
 
@@ -49,7 +49,7 @@ public class Piso {
      */
     public void presionarBotonBajar() {
         if (botonBajar != null) {
-            botonBajar.presionar();
+            botonBajar.iluminar();
         }
     }
 
@@ -61,7 +61,7 @@ public class Piso {
     public void cancelarIluminacion(Direccion direccion) {
         if (direccion == Direccion.SUBIENDO && botonSubir != null && botonSubir.isIluminado()) {
             botonSubir.cancelarIluminacion();
-        } else if (direccion == Direccion.BAJANDO && botonBajar != null & botonBajar.isIluminado()) {
+        } else if (direccion == Direccion.BAJANDO && botonBajar != null && botonBajar.isIluminado()) {
             botonBajar.cancelarIluminacion();
         }
 

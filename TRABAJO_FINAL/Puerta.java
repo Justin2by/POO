@@ -33,15 +33,6 @@ public class Puerta {
         }
     }
 
-    /**
-     * Verifica si la puerta está abierta
-     * 
-     * @return true si la puerta está abierta
-     */
-    public boolean estaAbierta() {
-        return estado == EstadoPuerta.ABIERTA;
-    }
-
     // Getter
     public EstadoPuerta getEstado() {
         return estado;
