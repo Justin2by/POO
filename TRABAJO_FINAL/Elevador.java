@@ -12,7 +12,7 @@ public class Elevador {
     private List<Boton> botonesInternos;
     private int pisoMinimo;
     private int pisoMaximo;
-    private List<Integer> peticiones;
+    private List<Integer> peticiones;  // Lista de pisos solicitados
 
     /**
      * Constructor del elevador
@@ -41,7 +41,9 @@ public class Elevador {
         if (direccion == Direccion.SUBIENDO && pisoActual < pisoMaximo) {
             pisoActual++;
             System.out.println("[MOVIMIENTO] Elevador subiendo... Piso actual: " + pisoActual);
+
         } else if (direccion == Direccion.BAJANDO && pisoActual > pisoMinimo) {
+            pisoActual--;
             System.out.println("[MOVIMIENTO] Elevador bajando... Piso actual: " + pisoActual);
         }
     }
