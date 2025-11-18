@@ -61,7 +61,7 @@ public class ControlElevador {
                 if (elevador.hayPeticionesEnDireccion()) {
                     elevador.mover();
                 } else {
-                    
+                    // Si no hay peticiones en esta direccion, cambiar direccion                    
                     elevador.determinarDireccion();
                     if (elevador.getDireccion() != Direccion.DETENIDO) {
                         elevador.mover();
@@ -69,7 +69,8 @@ public class ControlElevador {
                 }
             }
         }
-
+        
+        // Asegurar que el elevador se detiene al final
         if (elevador.getDireccion() != Direccion.DETENIDO) {
             elevador.parar();
         }
