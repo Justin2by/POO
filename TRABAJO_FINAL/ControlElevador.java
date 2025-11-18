@@ -44,20 +44,24 @@ public class ControlElevador {
         // Mientras haya peticiones pendientes
         while (elevador.tienePeticiones()) {
 
-            
+            // Atender el piso actual si hay peticion            
             if (elevador.getPeticiones().contains(elevador.getPisoActual())) {
                 elevador.atenderPisoActual();
 
+                // Cancelar iluminacion de botones del piso
                 Piso pisoActual = pisos.get(elevador.getPisoActual() - 1);
                 pisoActual.cancelarIluminacion(elevador.getDireccion());
             }
 
+            // Si todavia hay peticiones, determinar direccion y moverse
             if (elevador.tienePeticiones()) {
                 elevador.determinarDireccion();
 
+                // Si hay peticiones en la direccion actual, moverse
                 if (elevador.hayPeticionesEnDireccion()) {
                     elevador.mover();
                 } else {
+                    
                     elevador.determinarDireccion();
                     if (elevador.getDireccion() != Direccion.DETENIDO) {
                         elevador.mover();
