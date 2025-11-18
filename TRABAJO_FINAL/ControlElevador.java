@@ -13,6 +13,7 @@ public class ControlElevador {
 
     /**
      * Constructor del controlador
+     * 
      * @param numeroPisos Cantidad total de pisos del edificio
      */
     public ControlElevador(int numeroPisos) {
@@ -44,7 +45,7 @@ public class ControlElevador {
         // Mientras haya peticiones pendientes
         while (elevador.tienePeticiones()) {
 
-            // Atender el piso actual si hay peticion            
+            // Atender el piso actual si hay peticion
             if (elevador.getPeticiones().contains(elevador.getPisoActual())) {
                 elevador.atenderPisoActual();
 
@@ -61,7 +62,7 @@ public class ControlElevador {
                 if (elevador.hayPeticionesEnDireccion()) {
                     elevador.mover();
                 } else {
-                    // Si no hay peticiones en esta direccion, cambiar direccion                    
+                    // Si no hay peticiones en esta direccion, cambiar direccion
                     elevador.determinarDireccion();
                     if (elevador.getDireccion() != Direccion.DETENIDO) {
                         elevador.mover();
@@ -96,8 +97,9 @@ public class ControlElevador {
 
     /**
      * Solicitar el elevador desde un piso especifico
+     * 
      * @param numeroPiso El piso desde donde se solicita
-     * @param direccion La direccion deseada (SUBIENDO o BAJANDO)
+     * @param direccion  La direccion deseada (SUBIENDO o BAJANDO)
      */
     public void solicitarElevador(int numeroPiso, Direccion direccion) {
         if (numeroPiso < 1 || numeroPiso > pisos.size()) {
@@ -117,9 +119,10 @@ public class ControlElevador {
         // Agregar a la cola de solicitudes externas
         solicitudesExternas.add(numeroPiso);
     }
-    
+
     /**
      * Presionar un boton interno del elevador
+     * 
      * @param piso El piso destino
      */
     public void presionarBotonInterno(int piso) {
