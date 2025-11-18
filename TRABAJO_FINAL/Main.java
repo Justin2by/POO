@@ -1,7 +1,10 @@
 package TRABAJO_FINAL;
 
+/**
+ * Clase principal para demostrar el funcionamiento del sistema de elevador
+ */
 public class Main {
-    
+
     public static void main(String[] args) {
 
         // Crear un edificio de 10 pisos
@@ -19,7 +22,7 @@ public class Main {
         System.out.println("--- ESCENARIO 1: Uso basico del elevador ---");
         System.out.println();
         escenario1(control);
-    
+
         // Reiniciar el sistema para el siguiente escenario
         control = new ControlElevador(numeroPisos);
 
@@ -42,7 +45,7 @@ public class Main {
     private static void escenario1(ControlElevador control) {
         System.out.println();
         control.solicitarElevador(1, Direccion.SUBIENDO);
-        
+
         System.out.println();
         control.presionarBotonInterno(5);
 
