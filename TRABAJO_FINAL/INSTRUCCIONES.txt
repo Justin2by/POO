@@ -255,18 +255,6 @@ Para verificar que todo funciona correctamente:
   - [ERROR] - Error en la operación
   - [OK] - Operación exitosa 
 
-CONCLUSIÓN:
-El sistema implementa completamente el problema del elevador según las 
-especificaciones del documento UML proporcionado, utilizando correctamente
-los principios de Programación Orientada a Objetos en Java. 
-
-El proyecto demuestra comprensión sólida de:
-- Análisis de problemas y diseño de soluciones
-- Programación Orientada a Objetos
-- Implementación de algoritmos 
-- Validación de datos
-- Desarrollo de software profesional 
-
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                          FIN DEL DOCUMENTO                                 ║
 ╚════════════════════════════════════════════════════════════════════════════╝
