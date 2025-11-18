@@ -6,8 +6,18 @@ public class Main {
 
         int numeroPisos = 10;
         ControlElevador control = new ControlElevador(numeroPisos);
-        
+
         System.out.println();
+        System.out.println("========================================================");
+        System.out.println();
+        System.out.println("========================================================");
+        System.out.println();
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        escenario1(control);
+        
 
     }
 }
