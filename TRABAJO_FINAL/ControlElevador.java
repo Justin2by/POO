@@ -10,7 +10,11 @@ public class ControlElevador {
     private Elevador elevador;
     private List<Piso> pisos;
     private Queue<Integer> solicitudesExternas;
-
+    
+    /**
+     * Constructor del controlador
+     * @param numeroPisos Cantidad total de pisos del edificio
+     */
     public ControlElevador(int numeroPisos) {
         this.elevador = new Elevador(numeroPisos);
         this.pisos = new ArrayList<>();
@@ -23,12 +27,7 @@ public class ControlElevador {
             pisos.add(new Piso(i, esPrimero, esUltimo));
         }
     }
-    
-    /**
-     * Solicitar el elevador desde un piso especifico
-     * @param numeroPiso El piso desde donde se solicita
-     * @param direccion La direccion deseada (SUBIENDO o BAJANDO)
-     */
+
     public void loopControlElevador() {
         System.out.println();
         System.out.println("========================================================");
