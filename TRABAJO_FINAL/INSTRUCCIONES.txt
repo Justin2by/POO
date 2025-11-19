@@ -101,11 +101,6 @@ ESCENARIO 1: Uso básico
   - Presiona botón del piso 5
   - Elevador sube del piso 1 al 5 
 
-ESCENARIO 2: Múltiples solicitudes
-  - Varios pasajeros en pisos diferentes
-  - Solicitudes simultáneas de subir y bajar 
-  - Sistema optimiza el recorrido
-
 ═══════════════════════════════════════════════════════════════════════════
 6. SALIDA ESPERADA DEL PROGRAMA
 ═══════════════════════════════════════════════════════════════════════════
